@@ -13,7 +13,8 @@ const useFetch = () => {
           throw new Error("Failed to fetch recipes");
         }
         const data = await response.json();
-        setRecipes(data);
+        setRecipes(data.hits);
+        // setRecipes(data);
         setLoading(false);
       } catch (error) {
         setError(error);

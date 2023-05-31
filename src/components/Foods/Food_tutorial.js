@@ -1,5 +1,4 @@
-// https://i.ibb.co/ccZyWng/breakfast1.png
-
+import "../../App.css"
 export const Food_tutorial = () => {
   return (
     <>
@@ -12,7 +11,7 @@ export const Food_tutorial = () => {
         </div>
         {/* Right Element */}
         <div>
-          <img src="https://i.ibb.co/ccZyWng/breakfast1.png" alt="breakfast1" />
+          <img className="tutorial-image" src="https://i.ibb.co/ccZyWng/breakfast1.png" alt="breakfast1" />
         </div>
       </div>
     </>
