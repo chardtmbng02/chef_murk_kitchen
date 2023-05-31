@@ -59,7 +59,7 @@ export const Chef_Details = () => {
             <img
               className="transform transition duration-700 hover:scale-125"
               src={Chef_image3}
-              alt=""
+              alt="Chef_image3"
             />
           </div>
     

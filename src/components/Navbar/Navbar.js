@@ -33,7 +33,7 @@ export const Navbar = () => {
           <div className="flex items-center justify-end space-x-4">
             <div className="relative flex cursor-pointer">
               <div className="flex items-center justify-end space-x-6">
-                <button className="poppins" >Sign In</button>
+                <button className="poppins" > <Link to="/tutorial">Sign In</Link></button>
                 <button className="bg-primary px-6 py-3 text-black poppins rounded-full ring-red-300 focus:outline-none focus:ring-4 transform transition duration-700 hover:scale-105">
                   Sign Up
                 </button>
