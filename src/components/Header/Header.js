@@ -1,4 +1,16 @@
+import { useState } from "react";
+
 export const Header = () => {
+
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  }
+const handleButtonClick = () => {
+  console.log(inputValue)
+  setInputValue("")
+}
   return (
 
     <section className="header-banner h-96 w-full bg-yellow-50">
@@ -11,9 +23,9 @@ export const Header = () => {
           <input
             type="text"
             className=" rounded-full px-4 focus:outline-none w-full bg-transparent"
-            placeholder="Search here"
+            placeholder="Search here" onChange={handleInputChange} value={inputValue}
           />
-          <button className="text-sm bg-primary py-3 px-6 rounded-full text-white poppins ring-red-300 focus:ring-4 transition duration-300 hover:scale-105 transform">
+          <button onClick={handleButtonClick} className="text-sm bg-primary py-3 px-6 rounded-full text-white poppins ring-red-300 focus:ring-4 transition duration-300 hover:scale-105 transform">
             Search
           </button>
         </div>

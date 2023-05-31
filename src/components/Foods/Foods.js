@@ -47,7 +47,11 @@ export const Foods = () => {
                   Cook Time: {recipe.recipe.totalTime}
                 </h4>
                 <button className="bg-primary text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:scale-105">
-                  <Link to={recipe.recipe.uri}>Try It </Link>
+                <Link
+                    to={`tutorial/recipe_${recipe.recipe.uri.split("_")[1]}`}
+                  >
+                    Try It{" "}
+                  </Link>
                 </button>
               </div>
             </div>
