@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
 export const Foods = () => {
+
   const { recipes, loading, error } = useFetch();
 
   if (loading) {
@@ -31,7 +32,7 @@ export const Foods = () => {
                 {recipe.recipe.mealType}
               </span>
               <img
-                className="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                className=" rounded-3xl shadow-xl w-64 mx-auto transform transition duration-300 hover:scale-105"
                 src={recipe.recipe.image}
                 alt="recipe"
               />

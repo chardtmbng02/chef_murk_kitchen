@@ -7,8 +7,7 @@ export const Chef_Details = () => {
     <div className="max-w-screen-xl mx-auto my-12 px-6">
       <h1 className="text-4xl poppins pb-4 text-center">Why you choose us</h1>
       <h5 className="poppins text-gray-500 pb-4 text-center">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta atque
-        sunt corrupti quae officia labore?
+      Our team of talented chefs brings you a diverse range of mouthwatering dishes, carefully prepared with the freshest ingredients and delivered right to your doorstep. Whether you're craving comfort food, international cuisine, or healthy options, our online food kitchen is here to satisfy your taste buds and make your dining experience convenient and delicious.
       </h5>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
@@ -30,11 +29,7 @@ export const Chef_Details = () => {
               <h3 className="text-gray-800 poppins font-bold">
                 Assistant Chef
               </h3>
-              <p className="text-sm text-gray-500 poppins">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolores modi a natus, optio ut unde, nisi perferendis eius ab
-                placeat enim ipsam nulla commodi totam atque reprehenderit iusto
-                delectus facilis.
+              <p className="text-sm text-gray-500 poppins">A Chef who personally cooked for the Saudi Crown Prince Mohammed bin Salman. Chef Keith knows how to bring you a truly royal experience.
               </p>
             </div>
           </div>
@@ -56,11 +51,7 @@ export const Chef_Details = () => {
                 Ulrick Gil Sanchez
               </h1>
               <h3 className="text-gray-800 poppins font-bold">Head Chef</h3>
-              <p className="text-sm text-gray-500 poppins">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolores modi a natus, optio ut unde, nisi perferendis eius ab
-                placeat enim ipsam nulla commodi totam atque reprehenderit iusto
-                delectus facilis.
+              <p className="text-sm text-gray-500 poppins">An up and coming star in the culinary industry who's famous for his Filipino-American fusion dishes. He runs his kitchen with military discipline and an artis's creativity.
               </p>
             </div>
           </div>
@@ -82,11 +73,7 @@ export const Chef_Details = () => {
               <h3 className="text-gray-800 poppins font-bold">
                 Assistant Chef
               </h3>
-              <p className="text-sm text-gray-500 poppins">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolores modi a natus, optio ut unde, nisi perferendis eius ab
-                placeat enim ipsam nulla commodi totam atque reprehenderit iusto
-                delectus facilis.
+              <p className="text-sm text-gray-500 poppins">Chef Mel brings you authentic Chinese dishes from HongKong and the Mainland straight to your table. 
               </p>
             </div>
           </div>
