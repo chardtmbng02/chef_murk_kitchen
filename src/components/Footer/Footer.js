@@ -2,49 +2,7 @@
 import "./Footer.css"
 export const Footer = () => {
   return (
-    // <footer className="bg-gray-800 px-6 py-12">
-    //   <div className=" max-w-screen-xl px-6">
-    //     <div className="flex pb-8">
-
-    //     <div className="flex flex-grow">
-    //       <img className="footer-image" src={logo} alt="logo" />
-    //     </div>
-
-    //       <div className="flex space-x-12">
-    //         <div className="flex flex-col space-y-2">
-    //           <span className="text-white poppins pb-3 uppercase">Site Map</span>
-    //           <h5 className="text-white poppins">Chicken Recipe</h5>
-    //           <span className="text-white poppins">Beef Recipe</span>
-    //           <span className="text-white poppins">Ingredients</span>
-    //           <span className="text-white poppins">Recipes & Menus</span>
-    //         </div>
-    //         <div className="flex flex-col space-y-2">
-    //           <span className="text-white poppins pb-3 uppercase">Helpful Links</span>
-    //           <span className="text-white poppins">Subscription FAQs</span>
-    //           <span className="text-white poppins">Contact Us</span>
-    //           <span className="text-white poppins">Advertising</span>
-    //           <span className="text-white poppins">Newsletters</span>
-    //         </div>
-    //         <div className="flex flex-col space-y-2">
-    //           <span className="text-white poppins pb-3 uppercase">Food Innovation Group</span>
-    //           <span className="text-white poppins">The Chef Murk App</span>
-    //           <span className="text-white poppins">Bon Appetite</span>
-    //           <span className="text-white poppins">Gourmet</span>
-    //         </div>
-    //       </div>
-    //     </div>
-
-    //     <div className="flex items-center pt-8">
-    //       <div className="flex flex-grow">
-    //         <span className="poppins text-gray-600 mx-auto">
-    //           Murk Technology Solutions &copy; 2023 - All rights reserved.
-    //         </span>
-    //       </div>
-
-    //     </div>
-    //   </div>
-    // </footer>
-
+ 
 <footer id="dark-theme" class='bottom-0 left-0 flex flex-col w-full gap-8 px-8 py-16 md:gap-12'>
   <div class='grid grid-cols-2 gap-8 2xsm:grid-cols-2 md:grid-cols-4 '>
     <div class='flex flex-col gap-6'>
