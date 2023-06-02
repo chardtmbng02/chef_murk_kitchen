@@ -1,9 +1,12 @@
 import errorImg from "../assets/error.png";
 import { Link } from "react-router-dom";
+import { useTitle } from "../hooks/useTitle";
 
 
 
 export const ErrorMessage = () => {
+
+const pageTitle = useTitle("404 Page Not Found");
   return (
     <main className=" h-screen banner">
       <div className="max-w-screen-xl py-20 mx-auto px-6">

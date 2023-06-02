@@ -11,7 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="tutorial/:id" element={<Tutorial />} />
+          <Route path="results/:id" element={<Tutorial  />} />
+          {/* <Route path="results/*" element={<ErrorMessage />} /> */}
           <Route path="/search/:queryTerm" element={<Search />} />
           <Route path="*" element={<ErrorMessage />} />
         </Routes>
