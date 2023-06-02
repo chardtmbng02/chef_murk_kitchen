@@ -3,7 +3,6 @@ import useFetch from "../../hooks/useFetch";
 
 export const Foods = () => {
   const { recipes, loading, error } = useFetch();
-  // console.log(recipes);
 
   if (loading) {
     return (
@@ -73,7 +72,7 @@ export const Foods = () => {
                 </h4> */}
                 <button className="bg-primary text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:scale-105">
                   <Link
-                    to={`tutorial/recipe_${recipe.recipe.uri.split("_")[1]}`}
+                    to={`tutorial/${recipe.recipe.uri.split("_")[1]}`}
                   >
                     Try It{" "}
                   </Link>

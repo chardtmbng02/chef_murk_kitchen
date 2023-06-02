@@ -1,10 +1,8 @@
 import { useState } from "react";
-import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [inputValue, setInputValue] = useState("");
-  const { searchQuery } = useFetch(inputValue);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
