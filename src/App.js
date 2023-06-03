@@ -1,9 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./screens/Home";
-import { Tutorial } from "./screens/Tutorial";
+import { Home } from "./pages/Home";
 import { ErrorMessage } from "./components/ErrorMessage";
-import { Search } from "./screens/Search";
+import { Search } from "./pages/Search";
+import { SearchResults } from "./pages/SearchResults";
 
 function App() {
   return (
@@ -11,8 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="results/:id" element={<Tutorial  />} />
-          {/* <Route path="results/*" element={<ErrorMessage />} /> */}
+          <Route path="recipe/results/:id" element={<SearchResults  />} />
           <Route path="/search/:queryTerm" element={<Search />} />
           <Route path="*" element={<ErrorMessage />} />
         </Routes>

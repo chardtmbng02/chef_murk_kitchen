@@ -2,7 +2,7 @@ import Chef_image1 from "../../assets/chef_details/chef-image1.png";
 import Chef_image2 from "../../assets/chef_details/chef-image2.png";
 import Chef_image3 from "../../assets/chef_details/chef-image3.png";
 
-export const Chef_Details = () => {
+export const ChefDetails = () => {
   return (
     <div className="max-w-screen-xl mx-auto my-12 px-6">
       <h1 className="text-4xl poppins pb-4 text-center">Why you choose us</h1>

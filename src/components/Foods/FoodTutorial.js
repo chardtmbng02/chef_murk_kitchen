@@ -1,6 +1,6 @@
 import "../../App.css"
 
-export const Food_tutorial = () => {
+export const FoodTutorial = () => {
 
 
 

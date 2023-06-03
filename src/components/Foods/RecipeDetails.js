@@ -3,7 +3,7 @@ import { API_ID, API_KEY, API_URL } from "../../constant/index";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
 
-export const Recipe_details = () => {
+export const RecipeDetails = () => {
 
   const params = useParams();
   const [recipes, setRecipes] = useState([]);
@@ -23,9 +23,6 @@ export const Recipe_details = () => {
         const data = await response.json();
         setRecipes(data.recipe);
         setLoading(false);
-        console.log(params.id);
-        console.log(data);
-        console.log(data.recipe.label);
       } catch (error) {
         setError(error);
         setLoading(false);
@@ -35,7 +32,7 @@ export const Recipe_details = () => {
     fetchData();
   }, []);
 
-  const pageTitle = useTitle(`${recipes.label} Recipe`)
+  useTitle(`${recipes.label} Recipe`)
   return (
     <>
   

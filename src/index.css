@@ -51,3 +51,9 @@ body::-webkit-scrollbar {
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
+
+.teatime{
+color: #fff;
+background: green;
+border: 1px solid black;
+}

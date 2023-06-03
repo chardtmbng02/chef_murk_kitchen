@@ -1,16 +1,16 @@
 import { Navbar } from "../components/Navbar/Navbar";
-import { Recipe_details } from "../components/Foods/Recipe_details";
+import { RecipeDetails } from "../components/Foods/RecipeDetails";
 import { Footer } from "../components/Footer/Footer";
 
 
-export const Tutorial = () => {
+export const SearchResults = () => {
 
 
 
   return (
     <>
     <Navbar />
-    <Recipe_details />
+    <RecipeDetails />
     <Footer />
     </>
   )
