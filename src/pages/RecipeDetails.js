@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
-import { API_ID, API_KEY, API_URL } from "../../constant/index";
+import { API_ID, API_KEY, API_URL } from "../constant/index";
 import { useParams } from "react-router-dom";
-import { useTitle } from "../../hooks/useTitle";
+import { useTitle } from "../hooks/useTitle";
+import { Navbar } from "../components/Navbar/Navbar";
+import {SubHeader } from "../components/Header/SubHeader";
+import {Footer } from "../components/Footer/Footer"
+import { SingleFood } from "../components/Foods/SingleFood";
 
 export const RecipeDetails = () => {
 
@@ -35,12 +39,10 @@ export const RecipeDetails = () => {
   useTitle(`${recipes.label} Recipe`)
   return (
     <>
-  
-    <div className="mt-20">{recipes.label}</div>
-    <div>{recipes.uri}</div>
-    <div>{recipes.mealType}</div>
-    <div>{recipes.totalWeight}</div>
-    <div>{recipes.yield}</div>
+    <Navbar />
+    <SubHeader />
+    <SingleFood />
+    <Footer />
     </>
   );
   

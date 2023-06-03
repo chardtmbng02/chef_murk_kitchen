@@ -5,10 +5,9 @@ import { useTitle } from "../hooks/useTitle";
 
 
 export const ErrorMessage = () => {
-
-const pageTitle = useTitle("404 Page Not Found");
+useTitle("404 Page Not Found");
   return (
-    <main className=" h-screen banner">
+    <main className="h-screen banner">
       <div className="max-w-screen-xl py-20 mx-auto px-6">
         <div className="flex flex-col items-center justify-center h-3/4">
           <img className="w-96 object-contain" src={errorImg} alt="error" />

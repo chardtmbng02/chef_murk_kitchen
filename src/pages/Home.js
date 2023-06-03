@@ -1,6 +1,6 @@
 import { Navbar } from "../components/Navbar/Navbar";
-import { Header } from "../components/Header/Header";
-import { Foods } from "../components/Foods/Foods";
+import { MainHeader } from "../components/Header/MainHeader";
+import { FoodList } from "../components/Foods/FoodList";
 import { Footer } from "../components/Footer/Footer";
 import { ChefDetails } from "../components/Chefs/ChefDetails";
 import { useTitle } from "../hooks/useTitle";
@@ -10,8 +10,8 @@ export const Home = () => {
   return (
     <>
     <Navbar />
-    <Header />
-    <Foods />
+    <MainHeader />
+    <FoodList />
     <ChefDetails />
     <Footer />
     </>

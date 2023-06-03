@@ -8,8 +8,8 @@ export const Footer = () => {
     >
       <div className="grid grid-cols-2 gap-8 2xsm:grid-cols-2 md:grid-cols-4 ">
         <div className="flex flex-col gap-6">
-          <label className="text-gray-400">SOLUTIONS</label>
-          <ul className="flex flex-col gap-6 ">
+          <label className="text-gray-600 font-bold uppercase">Solutions</label>
+          <ul className="flex flex-col gap-6 text-gray-500">
             <li>Marketing</li>
             <li>Analytics</li>
             <li>Commerce</li>
@@ -17,8 +17,8 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col gap-6">
-          <label className="text-gray-400">Site Map</label>
-          <ul className="flex flex-col gap-6">
+          <label className="text-gray-600 font-bold uppercase">Site Map</label>
+          <ul className="flex flex-col gap-6 text-gray-500">
             <li>Recipes & Menus</li>
             <li>Ingredients</li>
             <li>Nutrients</li>
@@ -26,8 +26,8 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col gap-6">
-          <label className="text-gray-400 uppercase">Helpful Links</label>
-          <ul className="flex flex-col gap-6 ">
+          <label className="text-gray-600 font-bold uppercase">Helpful Links</label>
+          <ul className="flex flex-col gap-6 text-gray-500">
             <li>Subscriptions</li>
             <li>Contact Us</li>
             <li>Advertisements</li>
@@ -35,10 +35,10 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col gap-6">
-          <label className="text-gray-400 uppercase">
+          <label className="text-gray-600 font-bold uppercase">
             Food Innovation Group
           </label>
-          <ul className="flex flex-col gap-6 ">
+          <ul className="flex flex-col gap-6 text-gray-500">
             <li>The Chef Murk App</li>
             <li>Bon Appetit</li>
             <li>Gourmet</li>
@@ -50,7 +50,8 @@ export const Footer = () => {
 
       <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <div className="mx-auto">
-          &copy; 2023 Murk Technology Solutions. All rights reserved.
+          <span className="font-bold">Chef Murk Kitchen</span>
+          <p className="text-gray-500">&copy; 2023 Murk Technology Solutions. Philippines. All rights reserved.</p>
         </div>
       </div>
     </footer>

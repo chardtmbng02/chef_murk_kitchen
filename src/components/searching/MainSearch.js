@@ -1,14 +1,11 @@
 import React from "react";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { Link, useParams } from "react-router-dom";
-import { Navbar } from "../components/Navbar/Navbar";
-import { Footer } from "../components/Footer/Footer";
-import { useTitle } from "../hooks/useTitle";
 
-export const Search = () => {
+export const MainSearch = () => {
   const params = useParams();
   const { recipes, loading, error } = useFetch(params.queryTerm);
-  useTitle(`Search Results | ${params.queryTerm}`);
+  // useTitle(`Search Results | ${params.queryTerm}`);
 
   if (loading) {
     return (
@@ -42,13 +39,7 @@ export const Search = () => {
 
   return (
     <>
-      <Navbar />
       <section className="my-12 max-w-screen-xl mx-auto px-6">
-        <div className="flex items-center justify-center space-x-6">
-          <p className="menu_tab poppins"> Breakfast </p>
-          <p className="menu_tab poppins"> Lunch </p>
-          <p className="menu_tab poppins"> Dinner </p>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {recipes.length > 0 ? (
@@ -57,7 +48,7 @@ export const Search = () => {
                 className="bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
                 key={recipe.recipe.uri}
               >
-                <span className=" bg-red-100 border border-red-500 rounded-full text-primary text-sm poppins px-4 py-1 inline-block mb-4 ">
+                <span className={`${recipe.recipe.mealType} bg-red-100 border border-red-500 rounded-full text-primary text-sm poppins px-4 py-1 inline-block mb-4`}>
                   {recipe.recipe.mealType}
                 </span>
                 <img
@@ -78,11 +69,11 @@ export const Search = () => {
                   </h4>
                   <button className="bg-primary text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:scale-105">
                     <Link
-                      to={`../recipe/results/recipe_${
+                      to={`../recipe/details/recipe_${
                         recipe.recipe.uri.split("_")[1]
                       }`}
                     >
-                      Try It
+                      Show Recipe
                     </Link>
                   </button>
                 </div>
@@ -93,7 +84,6 @@ export const Search = () => {
           )}
         </div>
       </section>
-      <Footer />
     </>
   );
 };

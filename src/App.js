@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { ErrorMessage } from "./components/ErrorMessage";
-import { Search } from "./pages/Search";
+import { RecipeDetails } from "./pages/RecipeDetails";
 import { SearchResults } from "./pages/SearchResults";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="recipe/results/:id" element={<SearchResults  />} />
-          <Route path="/search/:queryTerm" element={<Search />} />
+          <Route path="recipe/details/:id" element={<RecipeDetails />} />
+          <Route path="/search/:queryTerm" element={<SearchResults />} />
           <Route path="*" element={<ErrorMessage />} />
         </Routes>
       </BrowserRouter>

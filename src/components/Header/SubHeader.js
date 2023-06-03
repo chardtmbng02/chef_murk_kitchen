@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+export const SubHeader = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e) => {
@@ -12,8 +12,8 @@ export const Header = () => {
     e.preventDefault();
     setInputValue("");
   };
-
   return (
+
     <section className="header-banner h-96 w-full bg-yellow-50">
       <div className="flex flex-col items-center justify-center h-full">
         <h1 className="text-center text-3xl md:text-4xl lg:text-5xl poppins font-semibold text-gray-700">
@@ -29,6 +29,7 @@ export const Header = () => {
             onChange={handleInputChange}
             value={inputValue}
           />
+
           <Link to={`search/${inputValue}`}>
             <button
               type="submit"
@@ -37,11 +38,9 @@ export const Header = () => {
               Search
             </button>
           </Link>
-
-
-
         </div>
       </div>
     </section>
-  );
-};
+    
+  )
+}
