@@ -1,0 +1,7 @@
+.subheader-banner {
+    background-image: url("../../assets/bannerbackground-blur.png");
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }

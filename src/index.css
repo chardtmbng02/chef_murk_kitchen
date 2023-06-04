@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,700&display=swap");
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,20 +15,24 @@ body::-webkit-scrollbar {
 }
 
 .header-banner {
-  background-image: url('../src/assets/bannerbackground-blur.png');
+  background-image: url("../src/assets/bannerbackground-blur.png");
   height: 600px !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 .banner {
-  background-image: url('../src/assets/bannerbackground-blur.png');
+  background-image: url("../src/assets/bannerbackground-blur.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
+.murk-text-red-700 {
+  color: #b91c1c;
+}
 .poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .bg-primary {
   background: #f91944;
@@ -55,12 +59,12 @@ body::-webkit-scrollbar {
   color: #ce193c;
 }
 
-.murk-textcolor-secondary{
+.murk-textcolor-secondary {
   color: #333;
 }
 
-.murk-bg-primary{
-  background:#ce193c;
+.murk-bg-primary {
+  background: #ce193c;
 }
 
 .murk-nav-bg {
@@ -72,20 +76,20 @@ body::-webkit-scrollbar {
   height: 420px;
 }
 
-.teatime{
-color: #046118;
-background: #bef1bc;
-border: 1px solid #046118;
+.teatime {
+  color: #046118;
+  background: #bef1bc;
+  border: 1px solid #046118;
 }
 
-.breakfast{
+.breakfast {
   color: #637e02;
   background: #effacf;
   border: 1px solid #637e02;
-  }
+}
 
-  .snack{
-    color: #0306a0;
-    background: #b9c8fa;
-    border: 1px solid #0306a0;
-    }
+.snack {
+  color: #0306a0;
+  background: #b9c8fa;
+  border: 1px solid #0306a0;
+}

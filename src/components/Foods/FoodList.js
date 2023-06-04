@@ -67,7 +67,7 @@ export const FoodList = () => {
                   alt="img-recipe"
                 />
                 <div className="flex flex-col items-center my-3 space-y-2">
-                  <h1 className="text-gray-900 poppins text-lg">
+                  <h1 className="text-gray-900 poppins text-md">
                     {recipe.recipe.label}
                   </h1>
                   <p className="text-gray-500 poppins text-sm text-center">
@@ -79,7 +79,7 @@ export const FoodList = () => {
                   <h4 className="text-gray-900 poppins font-bold">
                     Cook Time: {recipe.recipe.totalTime}
                   </h4>
-                  <button className="bg-primary text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:scale-105">
+                  <button className="bg-red-700 text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:bg-red-600 scale-105">
                     <Link
                       to={`recipe/details/${recipe.recipe.uri.split("_")[1]}`}
                     >

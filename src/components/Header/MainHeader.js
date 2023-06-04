@@ -16,19 +16,13 @@ export const MainHeader = () => {
 
   return (
     
-    <section className="relative py-28 bg-slate-50 header-banner">
-      <div className="-z-[1] absolute w-10/12 h-96 translate-y-1/3 translate-x-2">
-        <div className="relative -rotate-12 h-full w-full">
-          <div className="opacity-25 absolute h-64 w-96 bottom-0 pointer-events-none blur-[80px] rotate-4 bg-[linear-gradient(rgba(0,255,30,0.8)0%,rgba(65,252,176,0.6)100%)]"></div>
-          <div className="opacity-25 absolute right-0 top-0 h-64 w-96 pointer-events-none blur-[80px] rotate-4 bg-[linear-gradient(rgba(0,255,30,0.8)0%,rgba(65,252,176,0.6)100%)]"></div>
-        </div>
-      </div>
+    <section className="relative py-28 bg-slate-50 header-banner">   
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex justify-center items-center">
           <div className="w-full lg:w-1/2">
             <div className="text-center lg:text-left mb-6">
               <h1 className="max-w-lg mx-auto lg:mx-0 text-3xl md:text-5xl font-bold mb-5 text-gray-900">
-                <span className="block murk-textcolor-primary">
+                <span className="block murk-text-red-700">
                   Discover the endless
                 </span>
                 <span className="murk-textcolor-secondary">

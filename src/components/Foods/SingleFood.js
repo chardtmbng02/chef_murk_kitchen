@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { API_ID, API_KEY, API_URL } from "../../constant/index";
 import { useParams } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 
 export const SingleFood = () => {
 
@@ -38,6 +39,7 @@ export const SingleFood = () => {
     <div>{recipes.mealType}</div>
     <div>{recipes.totalWeight}</div>
     <div>{recipes.yield}</div>
+    <ScrollToTop smooth />
     </>
   );
   

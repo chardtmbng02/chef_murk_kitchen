@@ -3,18 +3,20 @@ import { API_ID, API_KEY, API_URL } from "../constant/index";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 import { Navbar } from "../components/Navbar/Navbar";
-import {SubHeader } from "../components/Header/SubHeader";
-import {Footer } from "../components/Footer/Footer"
+import { SubHeader } from "../components/Header/SubHeader";
+import { Footer } from "../components/Footer/Footer";
 import { SingleFood } from "../components/Foods/SingleFood";
+import ScrollToTop from "react-scroll-to-top";
 
 export const RecipeDetails = () => {
-
   const params = useParams();
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -36,14 +38,14 @@ export const RecipeDetails = () => {
     fetchData();
   }, []);
 
-  useTitle(`${recipes.label} Recipe`)
+  useTitle(`${recipes.label} Recipe`);
   return (
     <>
-    <Navbar />
-    <SubHeader />
-    <SingleFood />
-    <Footer />
+    <ScrollToTop smooth />
+      <Navbar />
+      <SubHeader />
+      <SingleFood />
+      <Footer />
     </>
   );
-  
 };

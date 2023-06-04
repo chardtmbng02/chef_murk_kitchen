@@ -18,13 +18,13 @@ export const ChefDetails = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
 
-        {/* Chef 1 */}
+        
         <div className="bg-white transform transition duration-700 hover:scale-105 p-6 rounded-2xl hover:shadow-xl">
           <div className="overflow-hidden rounded-2xl flex flex-grow">
             <img
               className="transform transition duration-700 hover:scale-125"
               src={Chef_image1}
-              alt=""
+              alt="Chef_image1"
             />
           </div>
     
@@ -39,13 +39,13 @@ export const ChefDetails = () => {
           </div>
         </div>
 
-        {/* Chef 2 */}
+        
         <div className="bg-white transform transition duration-700 hover:scale-105 p-6 rounded-2xl hover:shadow-xl">
           <div className="overflow-hidden rounded-2xl flex flex-grow">
             <img
               className="transform transition duration-700 hover:scale-125"
               src={Chef_image2}
-              alt=""
+              alt="Chef_image2"
             />
           </div>
     
@@ -60,7 +60,7 @@ export const ChefDetails = () => {
           </div>
         </div>
 
-        {/* Chef 3 */}
+        
         <div className="bg-white transform transition duration-700 hover:scale-105 p-6 rounded-2xl hover:shadow-xl">
           <div className="overflow-hidden rounded-2xl flex flex-grow">
             <img
