@@ -1,11 +1,11 @@
 import { Navbar } from "../components/Navbar/Navbar";
-// import { NavigationBar } from "../components/Navbar/NavigationBar";
 import { MainHeader } from "../components/Header/MainHeader";
 import { FoodList } from "../components/Foods/FoodList";
 import { Footer } from "../components/Footer/Footer";
 import { ChefDetails } from "../components/Chefs/ChefDetails";
 import { useTitle } from "../hooks/useTitle";
 import { useEffect } from "react";
+import { SousChef } from "../components/Chefs/SousChef";
 
 export const Home = () => {
   useTitle("Chef Murk Kitchen | Homepage");
@@ -16,10 +16,10 @@ export const Home = () => {
   return (
     <>
     <Navbar />
-    {/* <NavigationBar /> */}
     <MainHeader />
     <FoodList />
     <ChefDetails />
+    <SousChef />
     <Footer />
     </>
   )

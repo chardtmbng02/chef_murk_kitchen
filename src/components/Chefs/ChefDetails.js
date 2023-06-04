@@ -1,6 +1,6 @@
-import Chef_image1 from "../../assets/chef_details/chef-image1.png";
-import Chef_image2 from "../../assets/chef_details/chef-image2.png";
-import Chef_image3 from "../../assets/chef_details/chef-image3.png";
+import Chef_image1 from "../../assets/Chef-Details/chef-image1.png";
+import Chef_image2 from "../../assets/Chef-Details/chef-image2.png";
+import Chef_image3 from "../../assets/Chef-Details/chef-image3.png";
 
 export const ChefDetails = () => {
   return (
@@ -34,7 +34,7 @@ export const ChefDetails = () => {
               
               <h1 className="text-xl text-gray-800 poppins">Keith Nomer Hapa</h1>
               <h3 className="text-gray-800 poppins font-bold">Assistant Chef</h3>
-              <p className="text-sm text-gray-500 poppins">The kitchen, my friends, is a realm of creativity and passion. It is a place where ingredients from different corners of the world harmonize, where techniques are honed, and where magic is born from the simplest of elements. Just like a symphony conductor, the chef orchestrates the symphony of flavors, while I, as your trusted assistant, am here to play my part in perfect harmony.</p>
+              <p className="text-sm text-gray-500 poppins">The kitchen, my friends, is a realm of creativity and passion. It is a place where ingredients from different corners of the world harmonize and where techniques are honed.</p>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ export const ChefDetails = () => {
               
               <h1 className="text-xl text-gray-800 poppins">Ulrick Gil Sanchez</h1>
               <h3 className="text-gray-800 poppins font-bold">Head Chef</h3>
-              <p className="text-sm text-gray-500 poppins">As a head chef, I have the privilege of steering the ship, but I understand that true greatness lies in collaboration and the collective efforts of each and every one of you. Our kitchen is a symphony, where every ingredient, technique, and gesture plays a vital role in creating the masterpiece that is our culinary creations.</p>
+              <p className="text-sm text-gray-500 poppins">As a head chef, I have the privilege of steering the ship, but I understand that true greatness lies in collaboration and the collective efforts of each and every one of you.</p>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ export const ChefDetails = () => {
               
               <h1 className="text-xl text-gray-800 poppins">Mel Marx Sia</h1>
               <h3 className="text-gray-800 poppins font-bold">Assistant Chef</h3>
-              <p className="text-sm text-gray-500 poppins">It is with great pleasure and a sprinkle of excitement that I stand before you today as your assistant chef. As a faithful companion in the kitchen, I am here to lend a helping hand, to infuse our culinary journey with flavor, and to serve up a delicious experience for all of your senses.</p>
+              <p className="text-sm text-gray-500 poppins">It is with great pleasure that I stand before you today as your assistant chef. I am here to lend a helping hand, to infuse our culinary journey with flavor, and to serve up a delicious experience for all of your senses.</p>
             </div>
           </div>
         </div>

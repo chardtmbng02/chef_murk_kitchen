@@ -28,6 +28,10 @@ body::-webkit-scrollbar {
   background-position: center center;
   background-size: cover;
 }
+.chef-pic-sm{
+  width: 300px;
+  height: 300px;
+}
 .murk-text-red-700 {
   color: #b91c1c;
 }
