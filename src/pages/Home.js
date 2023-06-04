@@ -1,4 +1,5 @@
 import { Navbar } from "../components/Navbar/Navbar";
+// import { NavigationBar } from "../components/Navbar/NavigationBar";
 import { MainHeader } from "../components/Header/MainHeader";
 import { FoodList } from "../components/Foods/FoodList";
 import { Footer } from "../components/Footer/Footer";
@@ -15,6 +16,7 @@ export const Home = () => {
   return (
     <>
     <Navbar />
+    {/* <NavigationBar /> */}
     <MainHeader />
     <FoodList />
     <ChefDetails />

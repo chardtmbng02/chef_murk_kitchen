@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
 }
 
 .header-banner {
-  background-image: url("../src/assets/bannerbackground-blur.png");
+  background-image: url("../src/assets/Header-Images/bannerbackground-blur.png");
   height: 600px !important;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
 }
 
 .banner {
-  background-image: url("../src/assets/bannerbackground-blur.png");
+  background-image: url("../src/assets/Header-Images/bannerbackground-blur.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -42,6 +42,10 @@ body::-webkit-scrollbar {
 }
 .text-primary {
   color: #f91944;
+}
+
+.murk-text-secondary {
+  color: #555;
 }
 .border-primary {
   border: 1px solid #f91944;

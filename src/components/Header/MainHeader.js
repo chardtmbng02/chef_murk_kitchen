@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import header_pic  from "../../assets/header_images/header-pic.jpg"
+import header_pic  from "../../assets/Header-Images/header-pic.jpg"
 
 export const MainHeader = () => {
   const [inputValue, setInputValue] = useState("");

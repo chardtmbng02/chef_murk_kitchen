@@ -1,4 +1,4 @@
-import errorImg from "../assets/error.png";
+import errorImg from "../assets/Error.png";
 import { Link } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 

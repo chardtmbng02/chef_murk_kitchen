@@ -10,6 +10,12 @@
   --gray-800: #1f2937;
   --gray-900: #111827;
 }
+.footer-banner {
+  background-image: url("../../assets/Footer-Images/Footer-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
 footer {
   background-color: #fcf4e0;

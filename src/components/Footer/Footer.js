@@ -1,10 +1,9 @@
-// import logo from "../../assets/logo_footer.png";
 import "./Footer.css";
 export const Footer = () => {
   return (
     <footer
-      id="dark-theme"
-      className="bottom-0 left-0 flex flex-col w-full gap-8 px-8 py-16 md:gap-12"
+      id="chefftr"
+      className="bottom-0 left-0 flex flex-col w-full gap-8 px-8 py-16 md:gap-12 footer-banner"
     >
       <div className="grid grid-cols-2 gap-8 2xsm:grid-cols-2 md:grid-cols-4 ">
         <div className="flex flex-col gap-6">

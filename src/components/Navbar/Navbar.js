@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/Logo-2.png";
+import logo from "../../assets/Logo/Logo-2.png";
 
 export const Navbar = () => {
   const [changeHeader, setChangeHeader] = useState(false);
@@ -33,10 +33,10 @@ export const Navbar = () => {
           <div className="flex items-center justify-end space-x-4">
             <div className="relative flex cursor-pointer">
               <div className="flex items-center justify-end space-x-6">
-                <button className="poppins" >Sign In</button>
-                <button className="bg-red-700 px-6 py-3 text-white poppins rounded-full ring-red-300 focus:outline-none focus:ring-4 transform transition duration-700 hover:bg-red-600 scale-105">
+                <Link to="/signin"><button className="poppins" >Sign In</button></Link>
+                <Link to="/signup"><button className="bg-red-700 px-6 py-3 text-white poppins rounded-full ring-red-300 focus:outline-none focus:ring-4 transform transition duration-700 hover:bg-red-600 scale-105">
                   Sign Up
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
