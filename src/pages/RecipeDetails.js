@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import { API_ID, API_KEY } from "../constant/index";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
-import { Navbar } from "../components/Navbar/Navbar";
+import { NavigationBar } from "../components/Navbar/NavigationBar";
 import { SubHeader } from "../components/Header/SubHeader";
 import { Footer } from "../components/Footer/Footer";
 import { SingleFood } from "../components/Foods/SingleFood";
-import ScrollToTop from "react-scroll-to-top";
 import {FaArrowCircleUp} from 'react-icons/fa';
 import { Button } from "flowbite-react";
 
@@ -69,7 +68,7 @@ export const RecipeDetails = () => {
      <FaArrowCircleUp onClick={scrollToTop} 
      style={{display: visible ? 'inline' : 'none'}} />
     </Button>
-      <Navbar />
+      <NavigationBar />
       <SubHeader />
       <SingleFood />
       <Footer />
