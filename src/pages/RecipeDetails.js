@@ -7,8 +7,32 @@ import { SubHeader } from "../components/Header/SubHeader";
 import { Footer } from "../components/Footer/Footer";
 import { SingleFood } from "../components/Foods/SingleFood";
 import ScrollToTop from "react-scroll-to-top";
+import {FaArrowCircleUp} from 'react-icons/fa';
+import { Button } from "flowbite-react";
 
 export const RecipeDetails = () => {
+
+  const [visible, setVisible] = useState(false)
+  
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300){
+      setVisible(true)
+    } 
+    else if (scrolled <= 300){
+      setVisible(false)
+    }
+  };
+  
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+    });
+  };
+  window.addEventListener('scroll', toggleVisible);
+
+
   const params = useParams();
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,7 +65,10 @@ export const RecipeDetails = () => {
   useTitle(`${recipes.label} Recipe`);
   return (
     <>
-    <ScrollToTop smooth />
+    <Button>
+     <FaArrowCircleUp onClick={scrollToTop} 
+     style={{display: visible ? 'inline' : 'none'}} />
+    </Button>
       <Navbar />
       <SubHeader />
       <SingleFood />
