@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { API_ID, API_KEY } from "../constant/index";
 
 const useFetch = (queryTerm) => {
   const [recipes, setRecipes] = useState([]);
@@ -9,9 +8,14 @@ const useFetch = (queryTerm) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const response = await fetch(
-        //   `https://api.edamam.com/api/recipes/v2?type=public&q=${queryTerm}&app_id=${API_ID}&app_key=${API_KEY}`
-        // );
+      
+        if (`${queryTerm} === ""`) {
+          queryTerm = "Beef Steak";
+        }
+        else {
+          console.log(`${queryTerm}`)
+        }
+
         const response = await fetch(
           `https://api.edamam.com/api/recipes/v2?type=public&q=${queryTerm}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}`
         );
