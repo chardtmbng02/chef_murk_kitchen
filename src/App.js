@@ -22,7 +22,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="recipe/details/:id" element={<RecipeDetails />} />
+          <Route path="recipe/details/:id/*" element={<ErrorMessage />} />
           <Route path="/search/:queryTerm" element={<SearchResults />} />
+          <Route path="/search/:queryTerm/*" element={<ErrorMessage />} />
           <Route path="/signin" element={<SignIn />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
