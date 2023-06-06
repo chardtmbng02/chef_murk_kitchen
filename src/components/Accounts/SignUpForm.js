@@ -51,8 +51,11 @@ export const SignUpForm = () => {
 
             <div className="border-t border-gray-200 mt-1">
             <p className="text-center text-gray-400 py-1">OR</p>
-            <div className="flex items-center space-x-3 justify-center border border-gray-400 rounded-lg w-full py-3 cursor-pointer hover:bg-gray-300">
+            <div className="flex items-center space-x-3 justify-center border border-gray-400 rounded-lg w-full py-3 cursor-pointer hover:bg-red-300">
               <span className="poppins">Continue with Google</span>
+            </div>
+            <div className="flex items-center space-x-3 justify-center border border-gray-400 rounded-lg w-full py-3 mt-2 cursor-pointer hover:bg-red-300">
+              <span className="poppins">Continue with Facebook</span>
             </div>
           </div>
           </form>
