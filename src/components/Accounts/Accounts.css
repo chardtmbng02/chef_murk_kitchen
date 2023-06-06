@@ -1,0 +1,7 @@
+.signup-bg {
+  background-image: url("../../assets/Header-Images/bannerbackground-blur-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}

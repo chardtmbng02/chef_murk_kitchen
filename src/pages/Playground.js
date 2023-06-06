@@ -1,11 +1,17 @@
-
+import { NavigationBar } from "../components/Navbar/NavigationBar";
+import {MainHeader} from "../components/Header/MainHeader";
+import {ChefDetails} from "../components/Chefs/ChefDetails";
+import { Footer } from "../components/Footer/Footer";
 
 export const Playground = () => {
+
   return (
     <>
-      {/* <p className="text-2xl font-bold ml-4 mt-4">It is my Playground where I first test my frontend design.</p> */}
-
-      
+    <NavigationBar />
+    <MainHeader />
+    <ChefDetails />
+    <Footer />
     </>
   );
 };
+

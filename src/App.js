@@ -8,6 +8,7 @@ import { SearchResults } from "./pages/SearchResults";
 import { SignIn } from "./pages/SignIn";
 import { SignUp } from "./pages/SignUp";
 import { Playground } from "./pages/Playground";
+import { ContactUs } from "./pages/ContactUs";
 
 function App() {
 
@@ -24,7 +25,9 @@ function App() {
           <Route path="/search/:queryTerm" element={<SearchResults />} />
           <Route path="/signin" element={<SignIn />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/contact" element={<ContactUs />}></Route>
           <Route path="/playground" element={<Playground />}></Route>
+
           <Route path="*" element={<ErrorMessage />} />
         </Routes>
       </BrowserRouter>

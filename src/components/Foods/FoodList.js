@@ -50,7 +50,7 @@ export const FoodList = () => {
         </h5>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-          {recipes.length > 0 ? (
+          {recipes.length > 0  ? (
             recipes.map((recipe) => (
               <div
                 className="bg-white border border-gray-200 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"

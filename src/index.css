@@ -9,10 +9,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.orderContainer::-webkit-scrollbar,
+/* Show/Hide Scrollbard */
+/* .orderContainer::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .header-banner {
   background-image: url("../src/assets/Header-Images/bannerbackground-blur.png");
@@ -28,10 +29,11 @@ body::-webkit-scrollbar {
   background-position: center center;
   background-size: cover;
 }
-.chef-pic-sm{
-  width: 300px;
-  height: 300px;
+
+.murk-h-full{
+  height: 100vh;
 }
+
 .murk-text-red-700 {
   color: #b91c1c;
 }
@@ -100,4 +102,10 @@ body::-webkit-scrollbar {
   color: #0306a0;
   background: #b9c8fa;
   border: 1px solid #0306a0;
+}
+
+.lunchdinner{
+  color: #f8b652;
+  background: #f1dec0;
+  border: 1px solid #f8b652;
 }
