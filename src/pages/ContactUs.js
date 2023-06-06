@@ -1,8 +1,9 @@
 import { useTitle } from "../hooks/useTitle";
 import { useEffect } from "react";
 import { NavigationBar } from "../components/Navbar/NavigationBar";
-import { SubHeader } from "../components/Header/SubHeader";
 import { Contact } from "../components/Contact/Contact";
+import { ContactHeader } from "../components/Header/ContactHeader";
+import { SubHeader } from "../components/Header/SubHeader";
 import { Footer } from "../components/Footer/Footer";
 
 export const ContactUs = () => {
@@ -15,6 +16,7 @@ export const ContactUs = () => {
     <>
       <NavigationBar />
       <SubHeader />
+      <ContactHeader />
       <Contact />
       <Footer />
     </>
