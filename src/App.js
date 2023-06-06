@@ -25,7 +25,7 @@ function App() {
           <Route path="recipe/details/:id/*" element={<ErrorMessage />} />
           <Route path="/search/:queryTerm" element={<SearchResults />} />
           <Route path="/search/:queryTerm/*" element={<ErrorMessage />} />
-          <Route path="/signin" element={<SignIn />}></Route>
+          <Route path="signin" element={<SignIn />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
           <Route path="/playground" element={<Playground />}></Route>
