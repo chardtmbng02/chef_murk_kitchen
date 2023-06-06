@@ -19,7 +19,7 @@
 }
 
 .mr-img{
-  margin-right: 500px;
+  margin-right: 300px;
 }
 
 .nav-header-solid {
@@ -46,7 +46,7 @@
   background: transparent;
   border: none;
   outline: none;
-  color: var(--textColor);
+  color: #fff;
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;

@@ -104,6 +104,12 @@ body::-webkit-scrollbar {
   border: 1px solid #0306a0;
 }
 
+.brunch{
+  color: #995776;
+  background: #e2bbcd;
+  border: 1px solid #995776;
+}
+
 .lunchdinner{
   color: #f8b652;
   background: #f1dec0;

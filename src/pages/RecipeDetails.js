@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { API_ID, API_KEY, API_URL } from "../constant/index";
+import { API_ID, API_KEY } from "../constant/index";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 import { Navbar } from "../components/Navbar/Navbar";
@@ -20,7 +20,7 @@ export const RecipeDetails = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${API_URL}recipe_${params.id}?type=public&app_id=${API_ID}&app_key=${API_KEY}`
+          `https://api.edamam.com/api/recipes/v2?recipe_${params.id}?type=public&app_id=${API_ID}&app_key=${API_KEY}`
         );
 
         if (!response.ok) {
