@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { ErrorMessage } from "./components/ErrorMessage";
 import { RecipeDetails } from "./pages/RecipeDetails";
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="recipe/details/:id" element={<RecipeDetails />} />
@@ -29,7 +29,7 @@ function App() {
           <Route path="/playground" element={<Playground />}></Route>
           <Route path="*" element={<ErrorMessage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
