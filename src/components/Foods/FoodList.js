@@ -67,7 +67,7 @@ export const FoodList = () => {
                   alt="img-recipe"
                 />
                 <div className="flex flex-col items-center my-3 space-y-2">
-                  <h1 className="text-gray-900 poppins text-md">
+                  <h1 className="text-gray-900 poppins text-md text-center">
                     {recipe.recipe.label}
                   </h1>
                   <p className="text-gray-500 poppins text-sm text-center">

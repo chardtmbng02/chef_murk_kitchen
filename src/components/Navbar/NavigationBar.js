@@ -29,7 +29,7 @@ export const NavigationBar = () => {
     <header
       className={
         changeHeader
-          ? "nav-header nav-header-solid shadow-md transition duration-500"
+          ? "nav-header nav-header-solid shadow-xl transition duration-500"
           : "nav-header nav-header-transparent transition duration-500"
       }
     >

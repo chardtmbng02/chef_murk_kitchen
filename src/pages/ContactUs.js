@@ -13,10 +13,10 @@ export const ContactUs = () => {
   }, []);
   return (
     <>
-    <NavigationBar />
-    <SubHeader />
-    <Contact />
-    <Footer />
+      <NavigationBar />
+      <SubHeader />
+      <Contact />
+      <Footer />
     </>
-  )
+  );
 };

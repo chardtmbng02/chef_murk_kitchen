@@ -1,7 +1,7 @@
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
-import { Navbar } from "../components/Navbar/Navbar";
+import { NavigationBar } from "../components/Navbar/NavigationBar";
 import { Footer } from "../components/Footer/Footer";
 import { MainSearch } from "../components/searching/MainSearch";
 import { useEffect } from "react";
@@ -19,7 +19,7 @@ export const SearchResults = () => {
 
   return (
     <>
-    <Navbar />
+    <NavigationBar />
     <SubHeader />
     <MainSearch />
     <Footer />

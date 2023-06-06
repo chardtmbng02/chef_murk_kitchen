@@ -6,40 +6,15 @@ import { NavigationBar } from "../components/Navbar/NavigationBar";
 import { SubHeader } from "../components/Header/SubHeader";
 import { Footer } from "../components/Footer/Footer";
 import { SingleFood } from "../components/Foods/SingleFood";
-import {FaArrowCircleUp} from 'react-icons/fa';
-import { Button } from "flowbite-react";
 
 export const RecipeDetails = () => {
-
-  const [visible, setVisible] = useState(false)
-  
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300){
-      setVisible(true)
-    } 
-    else if (scrolled <= 300){
-      setVisible(false)
-    }
-  };
-  
-  const scrollToTop = () =>{
-    window.scrollTo({
-      top: 0, 
-      behavior: 'smooth'
-    });
-  };
-  window.addEventListener('scroll', toggleVisible);
-
-
   const params = useParams();
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -64,10 +39,6 @@ export const RecipeDetails = () => {
   useTitle(`${recipes.label} Recipe`);
   return (
     <>
-    <Button>
-     <FaArrowCircleUp onClick={scrollToTop} 
-     style={{display: visible ? 'inline' : 'none'}} />
-    </Button>
       <NavigationBar />
       <SubHeader />
       <SingleFood />
