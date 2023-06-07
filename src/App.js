@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ErrorMessage } from "./components/ErrorMessage";
+import {ComingSoon} from "./components/Maintenance/ComingSoon"
 import { Home } from "./pages/Home";
 import { RecipeDetails } from "./pages/RecipeDetails";
 import { SearchResults } from "./pages/SearchResults";
@@ -21,15 +22,16 @@ function App() {
     <>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<ContactUs />}></Route>
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<ComingSoon />} />
+          {/* <Route path="/contact" element={<ContactUs />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/search" element={<Search />}></Route>
           <Route path="/playground" element={<Playground />}></Route>
           <Route path="/search/:queryTerm" element={<SearchResults />} />
           <Route path="/search/:queryTerm/*" element={<ErrorMessage />} />
-          <Route path="recipe/details/:id" element={<RecipeDetails />} />
+          <Route path="recipe/details/:id" element={<RecipeDetails />} /> */}
           <Route path="recipe/details/:id/*" element={<ErrorMessage />} />
           <Route path="*" element={<ErrorMessage />} />
         </Routes>
