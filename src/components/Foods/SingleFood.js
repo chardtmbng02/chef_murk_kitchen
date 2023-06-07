@@ -66,7 +66,7 @@ export const SingleFood = () => {
               <div class="flex mb-4">
                 <div class="mr-4">
                   <span class="font-bold text-gray-700">Yield : </span>
-                  <span class="text-gray-600">{recipes.yield} Person(s)</span>
+                  <span class="text-gray-600">{recipes.yield}</span>
                 </div>
                 <div>
                   <span class="font-bold text-gray-700">Type : </span>
