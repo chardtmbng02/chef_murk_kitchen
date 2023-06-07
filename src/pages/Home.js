@@ -6,7 +6,7 @@ import { Footer } from "../components/Footer/Footer";
 import { ChefDetails } from "../components/Chefs/ChefDetails";
 import { useTitle } from "../hooks/useTitle";
 import { useEffect } from "react";
-import { SousChef } from "../components/Chefs/SousChef";
+import { Developers } from "../components/DeveloperTeam/Developers";
 
 export const Home = () => {
   useTitle("Chef Murk Kitchen | Homepage");
@@ -21,7 +21,7 @@ export const Home = () => {
     <MainHeader />
     <FoodList />
     <ChefDetails />
-    <SousChef />
+    <Developers />
     <Footer />
     </>
   )
