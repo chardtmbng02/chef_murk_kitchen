@@ -7,7 +7,7 @@ export const SubSearch = () => {
       <section className="search-body h-96 w-full bg-yellow-50">
         <div className="flex flex-col items-center justify-center h-full">
           <form class="flex flex-col md:flex-row gap-3">
-            <div class="flex mx-20 bg-white">
+            <div class="flex mx-10 bg-white">
               <input
                 type="text"
                 placeholder="Search now ..."

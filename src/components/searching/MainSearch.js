@@ -44,6 +44,17 @@ export const MainSearch = () => {
   return (
     <>
       <section className="my-12 max-w-screen-xl mx-auto px-6">
+      <div id="our chef" className="max-w-screen-xl mx-auto my-12 px-6">
+        <div className="relative flex py-5 items-center">
+          <div className="flex-grow border-t border-gray-400"></div>
+          <span className="flex-shrink text-3xl poppins mx-4 text-gray-500">
+            Recipe Search
+          </span>
+          <div className="flex-grow border-t border-gray-400"></div>
+        </div>
+        <h5 className="poppins text-gray-500 pb-4 text-center">
+          Explore all the Recipes from around the globe.
+        </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {recipes.length > 0 ? (
             recipes.map((recipe) => (
@@ -87,6 +98,7 @@ export const MainSearch = () => {
           ) : (
             <span>No Recipe to display</span>
           )}
+        </div>
         </div>
       </section>
     </>

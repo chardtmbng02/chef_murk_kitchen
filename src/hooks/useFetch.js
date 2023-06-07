@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const useFetch = (queryTerm) => {
 
-  const cuisine = "asian";
+  
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

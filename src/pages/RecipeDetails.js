@@ -6,6 +6,7 @@ import { NavigationBar } from "../components/Navbar/NavigationBar";
 import { SubHeader } from "../components/Header/SubHeader";
 import { Footer } from "../components/Footer/Footer";
 import { SingleFood } from "../components/Foods/SingleFood";
+// import { FoodSection } from "../components/Foods/FoodSection";
 
 export const RecipeDetails = () => {
   const params = useParams();
@@ -26,7 +27,6 @@ export const RecipeDetails = () => {
         }
         const data = await response.json();
         setRecipes(data.recipe);
-        console.log(data)
         setLoading(false);
       } catch (error) {
         setError(error);
@@ -43,6 +43,7 @@ export const RecipeDetails = () => {
       <NavigationBar />
       <SubHeader />
       <SingleFood />
+      {/* <FoodSection /> */}
       <Footer />
     </>
   );
