@@ -82,7 +82,7 @@ export const SingleFood = () => {
               <div class="mb-4">
                 <span class="font-bold text-gray-700">Source :</span>
                 <p class="text-gray-600 text-sm mt-2">
-                  <Link to={recipes.uri}>{recipes.source}</Link>
+                  {recipes.source}
                 </p>
               </div>
               <div>
