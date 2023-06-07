@@ -26,6 +26,7 @@ export const RecipeDetails = () => {
         }
         const data = await response.json();
         setRecipes(data.recipe);
+        console.log(data)
         setLoading(false);
       } catch (error) {
         setError(error);
@@ -36,7 +37,7 @@ export const RecipeDetails = () => {
     fetchData();
   }, []);
 
-  useTitle(`${recipes.label} Recipe`);
+  useTitle(`Recipe details | Chef Murk Kitchen`);
   return (
     <>
       <NavigationBar />

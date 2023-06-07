@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+
 import "./Foods.css";
 
 export const SingleFood = () => {
@@ -32,52 +33,71 @@ export const SingleFood = () => {
 
   return (
     <>
-      <div class="container px-6 py-8 mx-auto">
-
+      
       <div className="relative flex py-5 items-center">
-          <div className="flex-grow border-t border-gray-400"></div>
-          <span className="flex-shrink text-3xl poppins mx-5 text-gray-500">
-            Recipe Details
-          </span>
-          <div className="flex-grow border-t border-gray-400"></div>
-        </div>
-        <h5 className="poppins text-gray-500 pb-5 text-center">
-          Explore the Top 20 Recipes from around the globe.
-        </h5>
-        <h1 className="text-2xl font-bold mb-4 text-center">{recipes.label}</h1>
+        <div className="flex-grow border-t border-gray-400"></div>
+        <span className="flex-shrink text-3xl poppins mx-5 text-gray-500">
+          Recipe Details
+        </span>
+        <div className="flex-grow border-t border-gray-400"></div>
+      </div>
+      <h5 className="poppins text-gray-500 pb-5 text-center">
+      Deliciously crafted flavors, made with love and precision.
+      </h5>
 
-        <div class="flex flex-col md:flex-row murk-solid-border">
-          <div class="bg-white p-8 md:mb-0">
-            <div className="food-pic-full">
-              <img
-                src={recipes.image}
-                alt="recipe"
-                className="w-full rounded-lg food-pic-md"
-              />
+      <div class="bg-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row -mx-4">
+            <div class="md:flex-1 px-4">
+              <div class="h-[460px] rounded-lg bg-gray-300 mb-4">
+                <img
+                  class="w-full h-full object-cover"
+                  src={recipes.image}
+                  alt="Productimg"
+                />
+              </div>
+              
+            </div>
+            <div class="md:flex-1 px-4">
+              <h2 class="text-2xl font-bold mb-2">{recipes.label}</h2>
+              <p class="text-gray-600 text-sm mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
+                ante justo. Integer euismod libero id mauris malesuada
+                tincidunt.
+              </p>
+              <div class="flex mb-4">
+                <div class="mr-4">
+                  <span class="font-bold text-gray-700">Yield : </span>
+                  <span class="text-gray-600">{recipes.yield} Person(s)</span>
+                </div>
+                <div>
+                  <span class="font-bold text-gray-700">Type : </span>
+                  <span class="text-gray-600">{recipes.mealType} - {recipes.dishType} - {recipes.cuisineType}</span>
+                </div>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-gray-700">Calories :</span>
+                <p class="text-gray-600 text-sm mt-2">
+                  {recipes.calories}
+                </p>
+              </div>
+              <div class="mb-4">
+                <span class="font-bold text-gray-700">Source :</span>
+                <p class="text-gray-600 text-sm mt-2">
+                  <Link to={recipes.uri}>{recipes.source}</Link>
+                </p>
+              </div>
+              <div>
+                <span class="font-bold text-gray-700">Ingredient Lines :</span>
+                <p class="text-gray-600 text-sm mt-2">
+                  {recipes.ingredientLines}
+                </p>
+              </div>
             </div>
           </div>
-
-
-          <div class="bg-red-300 p-8">
-            <h2 className="text-xl font-semibold mb-2">Ingredients :</h2>
-            <ul className="list-disc list-inside">
-              <li>Ingredients 1</li>
-            </ul>
-            <h2 className="text-xl font-semibold mt-4 mb-2">Instructions :</h2>
-            <ol className="list-decimal list-inside">
-              <li>Step 1</li>
-            </ol>
-          </div>
-        </div>
-        
-        <div class="flex flex-col md:flex-row">
-          <p>{recipes.ingredientLines}</p>
         </div>
 
-      
       </div>
-
-      
     </>
   );
 };

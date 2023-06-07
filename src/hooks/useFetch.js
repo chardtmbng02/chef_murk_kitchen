@@ -8,13 +8,6 @@ const useFetch = (queryTerm) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-      
-        if (`${queryTerm} === ""`) {
-          queryTerm = "Beef Steak";
-        }
-        else {
-          console.log(`${queryTerm}`)
-        }
 
         const response = await fetch(
           `https://api.edamam.com/api/recipes/v2?type=public&q=${queryTerm}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}`
