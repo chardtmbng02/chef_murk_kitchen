@@ -61,9 +61,7 @@ export const SingleFood = () => {
             <div class="md:flex-1 px-4">
               <h2 class="text-2xl font-bold mb-2">{recipes.label}</h2>
               <p class="text-gray-600 text-sm mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
-                ante justo. Integer euismod libero id mauris malesuada
-                tincidunt.
+                &nbsp;
               </p>
               <div class="flex mb-4">
                 <div class="mr-4">
@@ -72,7 +70,7 @@ export const SingleFood = () => {
                 </div>
                 <div>
                   <span class="font-bold text-gray-700">Type : </span>
-                  <span class="text-gray-600">{recipes.mealType} - {recipes.dishType} - {recipes.cuisineType}</span>
+                  <span class="text-gray-600">{recipes.dishType} - {recipes.cuisineType}</span>
                 </div>
               </div>
               <div class="mb-4">
