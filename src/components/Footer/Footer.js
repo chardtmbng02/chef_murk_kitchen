@@ -29,7 +29,7 @@ export const Footer = () => {
           <label className="text-gray-600 font-bold uppercase">Helpful Links</label>
           <ul className="flex flex-col gap-6 text-gray-500">
             <li>Subscriptions</li>
-            <Link to="/contact"><li>Contact Us</li></Link>
+            <Link to="/contact" className="text-gray-500 hover:text-red-600"><li>Contact Us</li></Link>
             <li>Advertisements</li>
             <li>Partners</li>
           </ul>

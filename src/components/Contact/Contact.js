@@ -135,9 +135,21 @@ export const Contact = () => {
             <p className="mb-2">
               Lawton Ave, Mckinley West, Taguig, 1634 Metro Manila, Philippines.
             </p>
-            <p className="mb-2">(123) 456-7890</p>
+            <p className="mb-2"><i className="faphone"></i>+63 930 080 3710</p>
             <p className="mb-2">sup.murktechsolutions@gmail.com</p>
-            <img className="murk-map my-10 shadow-2xl border border-gray-400" src={Logo} alt="map"/>
+            
+            <div className="murk-map border border-gray-300 shadow-2xl my-6"
+            >
+              <iframe className="map-frame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1931.0618660746197!2d121.04277071374109!3d14.534914346107314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9e6b026ea17%3A0xa44a6fefb6015924!2sErnst%20%26%20Young%20Global%20Services%20(Philippines)%20Inc!5e0!3m2!1sen!2sph!4v1686134835638!5m2!1sen!2sph"
+                width="100%"
+                height="150%"
+                title="Google Maps Embed"
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+
           </div>
         </div>
       </div>

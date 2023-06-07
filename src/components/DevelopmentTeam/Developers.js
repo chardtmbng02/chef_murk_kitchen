@@ -2,6 +2,8 @@ import Dev1 from "../../assets/Dev-Details/dev-image1.png";
 import Dev2 from "../../assets/Dev-Details/dev-image2.png";
 import Dev3 from "../../assets/Dev-Details/dev-image3.png";
 import Dev4 from "../../assets/Dev-Details/dev-image4.png";
+import { Link } from "react-router-dom";
+
 export const Developers = () => {
   return (
     <>
@@ -24,21 +26,22 @@ export const Developers = () => {
               <li class="bg-gray-100 p-5 py-10 text-center">
                 <div class="flex flex-col items-center">
                   <div class="flex-shrink-0">
-                    <a href="#">
+                  
                       <img
                         class="mb-3 rounded-full mx-auto h-24 w-24"
                         src={Dev1}
                       />
-                    </a>
+                    
                   </div>
                   <div class="text-center">
                     <h4 class="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
-                      <a
-                        href="#"
-                        class="hover:text-indigo-600 transition duration-500 ease-in-out"
+                    <Link
+                        to="https://www.facebook.com/mher003"
+                        class="hover:text-red-700 transition duration-500 ease-in-out"
+                        target="_blank"
                       >
                         Keith Nomer Hapa
-                      </a>
+                      </Link>
                     </h4>
                     <p class="text-sm leading-6 text-gray-500 uppercase">
                       Front End Developer
@@ -49,21 +52,22 @@ export const Developers = () => {
               <li class="bg-gray-100 p-5 py-10 text-center">
                 <div class="flex flex-col items-center">
                   <div class="flex-shrink-0">
-                    <a href="#">
+                 
                       <img
                         class="mb-3 rounded-full mx-auto h-24 w-24"
                         src={Dev2}
                       />
-                    </a>
+                
                   </div>
                   <div class="text-center">
                     <h4 class="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
-                      <a
-                        href="#"
-                        class="hover:text-indigo-600 transition duration-500 ease-in-out"
+                    <Link
+                        to="https://www.facebook.com/melmarxduh"
+                        class="hover:text-red-700 transition duration-500 ease-in-out"
+                        target="_blank"
                       >
                         Mel Marx Sia
-                      </a>
+                      </Link>
                     </h4>
                     <p class="text-sm leading-6 text-gray-500 uppercase">
                       Back End Developer
@@ -74,21 +78,22 @@ export const Developers = () => {
               <li class="bg-gray-100 p-5 py-10 text-center">
                 <div class="flex flex-col items-center">
                   <div class="flex-shrink-0">
-                    <a href="#">
+                    
                       <img
                         class="mb-3 rounded-full mx-auto h-24 w-24"
                         src={Dev3}
                       />
-                    </a>
+                 
                   </div>
                   <div class="text-center">
                     <h4 class="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
-                      <a
-                        href="#"
-                        class="hover:text-indigo-600 transition duration-500 ease-in-out"
+                    <Link
+                        to="https://www.facebook.com/ulricksanchez"
+                        class="hover:text-red-700 transition duration-500 ease-in-out"
+                        target="_blank"
                       >
                         Ulrick Gil Sanchez
-                      </a>
+                      </Link>
                     </h4>
                     <p class="text-sm leading-6 text-gray-500 uppercase">
                       Full Stack Developer
@@ -99,21 +104,22 @@ export const Developers = () => {
               <li class="bg-gray-100 p-5 py-10 text-center">
                 <div class="flex flex-col items-center">
                   <div class="flex-shrink-0">
-                    <a href="#">
+                    
                       <img
                         class="mb-3 rounded-full mx-auto h-24 w-24"
                         src={Dev4}
                       />
-                    </a>
+                    
                   </div>
                   <div class="text-center">
                     <h4 class="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
-                      <a
-                        href="#"
-                        class="hover:text-indigo-600 transition duration-500 ease-in-out"
+                      <Link
+                        to="https://www.facebook.com/rdltmbng02"
+                        class="hover:text-red-700 transition duration-500 ease-in-out"
+                        target="_blank"
                       >
                         Richard Tambong
-                      </a>
+                      </Link>
                     </h4>
                     <p class="text-sm leading-6 text-gray-500 uppercase">
                      Team Leader

@@ -44,3 +44,7 @@ button {
   background-color: white;
   border: 1px solid var(--comp-primary);
 }
+
+.footer-link:hover {
+  color: red;
+}

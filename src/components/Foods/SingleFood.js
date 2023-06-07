@@ -88,7 +88,7 @@ export const SingleFood = () => {
               <div>
                 <span class="font-bold text-gray-700">Ingredient Lines :</span>
                 <p class="text-gray-600 text-sm mt-2">
-                  {recipes.ingredientLines}
+                  {recipes.ingredientsLine}
                 </p>
               </div>
             </div>

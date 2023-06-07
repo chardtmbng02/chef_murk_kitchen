@@ -1,6 +1,6 @@
 {
-  "short_name": "Chef Murk's Kitchen",
-  "name": "A simple website for fetching food api",
+  "short_name": "Chef Murk Kitchen",
+  "name": "Food Recipe website created by Murk Technology Solutions.",
   "icons": [
     {
       "src": "favicon.ico",
