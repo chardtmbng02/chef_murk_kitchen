@@ -9,11 +9,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* Show/Hide Scrollbard */
-/* .orderContainer::-webkit-scrollbar,
+/* Show/Hide Scrollbar */
+.orderContainer::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
-} */
+}
 
 .header-banner {
   background-image: url("../src/assets/Header-Images/bannerbackground-blur.png");

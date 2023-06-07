@@ -21,7 +21,7 @@ export const FoodList = () => {
               cy="12"
               r="10"
               stroke="currentColor"
-              stroke-width="4"
+              strokeWidth="4"
             ></circle>
             <path
               className="opacity-75"
@@ -51,14 +51,18 @@ export const FoodList = () => {
           <div className="flex-grow border-t border-gray-400"></div>
         </div>
         <h5 className="poppins text-gray-500 pb-4 text-center">
-          Explore the Top 20 Recipes from around the globe.
+          Explore the Top Recipes from around the globe.
         </h5>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {recipes.hits.length > 0 ? (
-            recipes.hits.slice(0, 10).map((recipe) => (
+            recipes.hits.slice(1, 7).map((recipe) => (
+              
+              <Link
+              to={`recipe/details/${recipe.recipe.uri.split('_')[1]}`}
+            >
               <div
-                className="bg-white border border-gray-200 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
+                className="text-center bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
                 key={recipe.recipe.uri}
               >
                 <span
@@ -82,15 +86,16 @@ export const FoodList = () => {
                     Cuisine Type : {recipe.recipe.cuisineType}
                   </p>
 
-                  <button className="bg-red-700 text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:bg-red-600 scale-105">
+                  {/* <button className="bg-red-700 text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:bg-red-600 scale-105">
                     <Link
                       to={`recipe/details/${recipe.recipe.uri.split('_')[1]}`}
                     >
-                      Show Recipe{' '}
+                      Show Recipe
                     </Link>
-                  </button>
+                  </button> */}
                 </div>
               </div>
+              </Link>
             ))
           ) : (
             <span>No Recipe's Found</span>

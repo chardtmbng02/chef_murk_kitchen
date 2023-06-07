@@ -1,7 +1,19 @@
-.signup-bg {
+.accounts-bg {
   background-image: url("../../assets/Header-Images/bannerbackground-blur-2.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 100%;
+  padding-top: 80px;
+}
+
+@media only screen  and (min-width: 1367px) {
+  .accounts-bg {
+    background-image: url("../../assets/Header-Images/bannerbackground-blur-2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 200px;
+  }
 }

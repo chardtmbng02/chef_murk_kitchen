@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../Accounts/Accounts.css"
 export const SignInForm = () => {
   return (
-    <section className="pt-20 signup-bg">
+    <section className="pt-20 accounts-bg">
       <div className="flex flex-col justify-center items-center border-gray-200">
         <form className="bg-white w-96 mt-6 p-4 pb-5 mb-10 rounded-lg shadow-xl border border-gray-300">
         <p className="text-3xl font-bold text-center pb-4 murk-text-secondary">Sign In</p>

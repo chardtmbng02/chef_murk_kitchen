@@ -19,109 +19,109 @@ export const Developers = () => {
           Let us know something about the developers.
         </h5>
 
-      <div class="py-10 bg-white">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between">
-          <div class="sm:w-6/12 order-last sm:order-first">
-            <ul class="grid grid-cols-2 col-gap-5 row-gap-5 md:col-gap-10 md:row-gap-10">
-              <li class="bg-gray-100 p-5 py-10 text-center">
-                <div class="flex flex-col items-center">
-                  <div class="flex-shrink-0">
+      <div className="py-10 bg-white">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between">
+          <div className="sm:w-6/12 order-last sm:order-first">
+            <ul className="grid grid-cols-2 col-gap-5 row-gap-5 md:col-gap-10 md:row-gap-10">
+              <li className="bg-gray-100 p-5 py-10 text-center">
+                <div className="flex flex-col items-center">
+                  <div className="flex-shrink-0">
                   
                       <img
-                        class="mb-3 rounded-full mx-auto h-24 w-24"
-                        src={Dev1}
+                        className="mb-3 rounded-full mx-auto h-24 w-24"
+                        src={Dev1} alt="dev1"
                       />
                     
                   </div>
-                  <div class="text-center">
-                    <h4 class="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
+                  <div className="text-center">
+                    <h4 className="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
                     <Link
                         to="https://www.facebook.com/mher003"
-                        class="hover:text-red-700 transition duration-500 ease-in-out"
+                        className="hover:text-red-700 transition duration-500 ease-in-out"
                         target="_blank"
                       >
                         Keith Nomer Hapa
                       </Link>
                     </h4>
-                    <p class="text-sm leading-6 text-gray-500 uppercase">
+                    <p className="text-sm leading-6 text-gray-500 uppercase">
                       Front End Developer
                     </p>
                   </div>
                 </div>
               </li>
-              <li class="bg-gray-100 p-5 py-10 text-center">
-                <div class="flex flex-col items-center">
-                  <div class="flex-shrink-0">
+              <li className="bg-gray-100 p-5 py-10 text-center">
+                <div className="flex flex-col items-center">
+                  <div className="flex-shrink-0">
                  
                       <img
-                        class="mb-3 rounded-full mx-auto h-24 w-24"
-                        src={Dev2}
+                        className="mb-3 rounded-full mx-auto h-24 w-24"
+                        src={Dev2} alt="dev2"
                       />
                 
                   </div>
-                  <div class="text-center">
-                    <h4 class="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
+                  <div className="text-center">
+                    <h4 className="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
                     <Link
                         to="https://www.facebook.com/melmarxduh"
-                        class="hover:text-red-700 transition duration-500 ease-in-out"
+                        className="hover:text-red-700 transition duration-500 ease-in-out"
                         target="_blank"
                       >
                         Mel Marx Sia
                       </Link>
                     </h4>
-                    <p class="text-sm leading-6 text-gray-500 uppercase">
+                    <p className="text-sm leading-6 text-gray-500 uppercase">
                       Back End Developer
                     </p>
                   </div>
                 </div>
               </li>
-              <li class="bg-gray-100 p-5 py-10 text-center">
-                <div class="flex flex-col items-center">
-                  <div class="flex-shrink-0">
+              <li className="bg-gray-100 p-5 py-10 text-center">
+                <div className="flex flex-col items-center">
+                  <div className="flex-shrink-0">
                     
                       <img
-                        class="mb-3 rounded-full mx-auto h-24 w-24"
-                        src={Dev3}
+                        className="mb-3 rounded-full mx-auto h-24 w-24"
+                        src={Dev3} alt="dev3"
                       />
                  
                   </div>
-                  <div class="text-center">
-                    <h4 class="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
+                  <div className="text-center">
+                    <h4 className="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
                     <Link
                         to="https://www.facebook.com/ulricksanchez"
-                        class="hover:text-red-700 transition duration-500 ease-in-out"
+                        className="hover:text-red-700 transition duration-500 ease-in-out"
                         target="_blank"
                       >
                         Ulrick Gil Sanchez
                       </Link>
                     </h4>
-                    <p class="text-sm leading-6 text-gray-500 uppercase">
+                    <p className="text-sm leading-6 text-gray-500 uppercase">
                       Full Stack Developer
                     </p>
                   </div>
                 </div>
               </li>
-              <li class="bg-gray-100 p-5 py-10 text-center">
-                <div class="flex flex-col items-center">
-                  <div class="flex-shrink-0">
+              <li className="bg-gray-100 p-5 py-10 text-center">
+                <div className="flex flex-col items-center">
+                  <div className="flex-shrink-0">
                     
                       <img
-                        class="mb-3 rounded-full mx-auto h-24 w-24"
-                        src={Dev4}
+                        className="mb-3 rounded-full mx-auto h-24 w-24"
+                        src={Dev4} alt="dev4"
                       />
                     
                   </div>
-                  <div class="text-center">
-                    <h4 class="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
+                  <div className="text-center">
+                    <h4 className="text-lg leading-6 font-semibold text-gray-900 transition duration-500 ease-in-out">
                       <Link
                         to="https://www.facebook.com/rdltmbng02"
-                        class="hover:text-red-700 transition duration-500 ease-in-out"
+                        className="hover:text-red-700 transition duration-500 ease-in-out"
                         target="_blank"
                       >
                         Richard Tambong
                       </Link>
                     </h4>
-                    <p class="text-sm leading-6 text-gray-500 uppercase">
+                    <p className="text-sm leading-6 text-gray-500 uppercase">
                      Team Leader
                     </p>
                   </div>
