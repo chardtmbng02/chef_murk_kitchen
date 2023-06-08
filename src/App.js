@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ErrorMessage } from "./components/ErrorMessage";
 import { Home } from "./pages/Home";
 import { RecipeDetails } from "./pages/RecipeDetails";
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactUs />}></Route>
@@ -33,7 +33,7 @@ function App() {
           <Route path="recipe/details/:id/*" element={<ErrorMessage />} />
           <Route path="*" element={<ErrorMessage />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
