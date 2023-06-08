@@ -74,6 +74,40 @@ export const MainSearch = () => {
       <section className="my-12 max-w-screen-xl mx-auto px-6">
        <div className="mx-auto">
         <form class="flex flex-col md:flex-row gap-3">
+          
+          <select
+            id="cuisineType"
+            name="cuisineType"
+            class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
+          >
+            <option value="All" selected="">
+              All
+            </option>
+            <option value="American">American</option>
+            <option value="Asian">Asian</option>
+            <option value="British">British</option>
+            <option value="Chinese">Chinese</option>
+            <option value="French">French</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+            <option value="Italian">Italian</option>
+          </select>
+
+          <select
+            id="mealType"
+            name="mealType"
+            class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
+          >
+            <option value="All" selected="">
+              All
+            </option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Snack">Snack</option>
+            <option value="Teatime">Teatime</option>
+          </select>
+
           <div class="flex">
             <input
               type="text"
@@ -87,37 +121,6 @@ export const MainSearch = () => {
               Search
             </button>
           </div>
-          <select
-            id="pricingType"
-            name="pricingType"
-            class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
-          >
-            <option value="All" selected="">
-              All
-            </option>
-            <option value="Freemium">American</option>
-            <option value="Free">Asian</option>
-            <option value="Paid">British</option>
-            <option value="Paid">British</option>
-            <option value="Paid">British</option>
-            <option value="Paid">British</option>
-            <option value="Paid">British</option>
-          </select>
-
-          <select
-            id="pricingType"
-            name="pricingType"
-            class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
-          >
-            <option value="All" selected="">
-              All
-            </option>
-            <option value="Breakfast">Breakfast</option>
-            <option value="Dinner">Dinner</option>
-            <option value="Lunch">Lunch</option>
-            <option value="Snack">Snack</option>
-            <option value="Teatime">Teatime</option>
-          </select>
         </form>
         </div>
         <div className="relative flex py-5 items-center">
