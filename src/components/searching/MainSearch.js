@@ -9,8 +9,8 @@ export const MainSearch = () => {
   const [previousPageUrl, setPreviousPageUrl] = useState("");
   const { recipes, loading, error } = useFetch(params.queryTerm, nextPageUrl);
 
-  const itemsPerPage = recipes.to - recipes.from + 1;
-  const currentPage = Math.ceil(recipes.from / itemsPerPage);
+  // const itemsPerPage = recipes.to - recipes.from + 1;
+  // const currentPage = Math.ceil(recipes.from / itemsPerPage);
 
   const loadNextPage = () => {
     setPreviousPageUrl(nextPageUrl);
@@ -118,7 +118,7 @@ export const MainSearch = () => {
 
         {/* Start of Pagination */}
         <div class="text-center mx-auto max-w-lg px-4 mt-12 bg-white sm:px-6">
-          <span class="text-lg text-gray-700 dark:text-gray-400">
+          <span class="text-sm text-gray-700 dark:text-gray-400">
             Showing{' '}
             <span class="font-semibold text-gray-900 dark:text-white">
               {recipes.from}{' '}
@@ -163,6 +163,7 @@ export const MainSearch = () => {
               </svg>
               Previous
             </button>
+
             <button
               onClick={loadNextPage}
               type="button"
@@ -209,6 +210,7 @@ export const MainSearch = () => {
                 </svg>
                 Previous Page
               </button>
+
               <button
                 onClick={loadNextPage}
                 type="button"

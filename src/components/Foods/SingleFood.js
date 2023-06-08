@@ -37,7 +37,7 @@ export const SingleFood = () => {
 
   return (
     <>
-      <section>
+      <section className="my-12 max-w-screen-xl mx-auto px-6">
         <div className="relative flex py-5 items-center">
           <div className="flex-grow border-t border-gray-400"></div>
           <span className="flex-shrink text-3xl poppins mx-5 text-gray-500">
@@ -53,7 +53,7 @@ export const SingleFood = () => {
           <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row -mx-4">
               <div class="md:flex-1 px-4">
-                <div class="h-[460px] rounded-lg bg-gray-300 mb-4">
+                <div class="h-[460px] rounded-lg bg-gray-300 mb-4 shadow shadow-xl">
                   <img
                     class="w-full h-full object-cover"
                     src={recipes.image}
@@ -62,33 +62,88 @@ export const SingleFood = () => {
                 </div>
               </div>
               <div class="md:flex-1 px-4">
-                <h2 class="text-2xl font-bold mb-2">{recipes.label}</h2>
-                <p class="text-gray-600 text-sm mb-4">&nbsp;</p>
-                <div class="flex mb-4">
-                  <div class="mr-4">
-                    <span class="font-bold text-gray-700">Yield : </span>
-                    <span class="text-gray-600">{recipes.yield}</span>
+                <div className="rounded-md bg-white shadow-md p-8 border border-gray-300 shadow-xl">
+                  <div className="text-2xl font-bold text-red-700 mb-4">
+                    Nutrition Facts
                   </div>
-                  <div>
-                    <span class="font-bold text-gray-700">Type : </span>
-                    <span class="text-gray-600">
-                      {recipes.dishType} - {recipes.cuisineType}
-                    </span>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <span class="font-bold text-gray-700">Calories :</span>
-                  <p class="text-gray-600 text-sm mt-2">{recipes.calories}</p>
-                </div>
-                <div class="mb-4">
-                  <span class="font-bold text-gray-700">Source :</span>
-                  <p class="text-gray-600 text-sm mt-2">{recipes.source}</p>
-                </div>
-                <div>
-                  <span class="font-bold text-gray-700">
-                    Ingredient Lines :
-                  </span>
-                  <div class="text-gray-600 text-sm mt-2"></div>
+                  <table class="w-full text-sm leading-5">
+                    <thead class="bg-gray-100">
+                      <tr>
+                        <th class="py-3 px-4 text-left font-medium text-gray-600">
+                          Nutrients
+                        </th>
+                        <th class="py-3 px-4 text-left font-medium text-gray-600">
+                          Amount per Serving (g)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="py-3 px-4 text-left font-medium text-gray-600">
+                          Calories
+                        </td>
+                        <td class="py-3 px-4 text-end pr-10">
+                          {Math.round(recipes.calories)}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 px-4 text-left font-medium text-gray-600 pl-8">
+                          Saturated Fat
+                        </td>
+                        <td class="py-3 px-4 text-end pr-10">
+                          {Math.round(nutrients.FASAT?.quantity)}
+                          {nutrients.FASAT?.unit}
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="py-3 px-4 text-left font-medium text-gray-600">
+                          Cholesterol
+                        </td>
+                        <td class="py-3 px-4 text-end pr-10">
+                          {Math.round(nutrients.CHOLE?.quantity)}
+                          {nutrients.CHOLE?.unit}
+                        </td>
+                      </tr>
+                      <tr class="bg-gray-50">
+                        <td class="py-3 px-4 text-left font-medium text-gray-600">
+                          Sodium
+                        </td>
+                        <td class="py-3 px-4 text-end pr-10">
+                          {Math.round(nutrients.NA?.quantity)}{" "}
+                          {nutrients.NA?.unit}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 px-4 text-left font-medium text-gray-600">
+                          Total Carbohydrate
+                        </td>
+                        <td class="py-3 px-4 text-end pr-10">
+                          {Math.round(nutrients.CHOCDF?.quantity)}
+                          {nutrients.CHOCDF?.unit}
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="py-3 px-4 text-left font-medium text-gray-600 pl-8">
+                          Sugars
+                        </td>
+                        <td class="py-3 px-4 text-end pr-10">
+                          {Math.round(nutrients.SUGAR?.quantity)}
+                          {nutrients.SUGAR?.unit}
+                        </td>
+                      </tr>
+                      <tr class="bg-gray-50">
+                        <td class="py-3 px-4 text-left font-medium text-gray-600">
+                          Protein
+                        </td>
+                        <td class="py-3 px-4 text-end pr-10">
+                          {Math.round(nutrients.PROCNT?.quantity)}
+                          {nutrients.PROCNT?.unit}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -99,7 +154,7 @@ export const SingleFood = () => {
       <section className="bg-gray-200 py-1">
         <div className="container mx-auto px-2">
           <div className="flex flex-wrap -mx-4 mt-12">
-            <div className="w-full md:w-1/3 px-4 mb-8">
+            <div className="w-full md:w-1/2 px-4 mb-8">
               <div className="rounded-md bg-white shadow-md p-8">
                 <div className="text-2xl font-bold text-red-700 mb-4">
                   Ingredients
@@ -113,146 +168,43 @@ export const SingleFood = () => {
                 </ul>
               </div>
             </div>
-            <div className="w-full md:w-1/3 px-4 mb-8">
+
+            <div className="w-full md:w-1/2 px-4 mb-8">
               <div className="rounded-md bg-white shadow-md p-8">
                 <div className="text-2xl font-bold text-red-700 mb-4">
-                  Nutrition Facts
+                  More Recipe Info
                 </div>
-                <table class="w-full text-sm leading-5">
-                  <thead class="bg-gray-100">
-                    <tr>
-                      <th class="py-3 px-4 text-left font-medium text-gray-600">
-                        Nutrients
-                      </th>
-                      <th class="py-3 px-4 text-left font-medium text-gray-600">
-                        Amount per Serving (g)
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="py-3 px-4 text-left font-medium text-gray-600">
-                        Calories
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(recipes.calories)}
-                      </td>
-                    </tr>
-                    <tr class="bg-gray-50">
-                      <td class="py-3 px-4 text-left font-medium text-gray-600">
-                        Total Fat
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.FAT?.quantity)}{" "}
-                        {nutrients.FAT?.unit}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="py-3 px-4 text-left font-medium text-gray-600 pl-8">
-                        Saturated Fat
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.FASAT?.quantity)}
-                        {nutrients.FASAT?.unit}
-                      </td>
-                    </tr>
-                    <tr class="bg-gray-50">
-                      <td class="py-3 px-4 text-left font-medium text-gray-600 pl-8">
-                        Trans Fat
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.FATRN?.quantity)}
-                        {nutrients.FATRN?.unit}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="py-3 px-4 text-left font-medium text-gray-600">
-                        Cholesterol
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.CHOLE?.quantity)}
-                        {nutrients.CHOLE?.unit}
-                      </td>
-                    </tr>
-                    <tr class="bg-gray-50">
-                      <td class="py-3 px-4 text-left font-medium text-gray-600">
-                        Sodium
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.NA?.quantity)}{" "}
-                        {nutrients.NA?.unit}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="py-3 px-4 text-left font-medium text-gray-600">
-                        Total Carbohydrate
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.CHOCDF?.quantity)}
-                        {nutrients.CHOCDF?.unit}
-                      </td>
-                    </tr>
-                    <tr class="bg-gray-50">
-                      <td class="py-3 px-4 text-left font-medium text-gray-600 pl-8">
-                        Dietary Fiber
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.FIBTG?.quantity)}
-                        {nutrients.FIBTG?.unit}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="py-3 px-4 text-left font-medium text-gray-600 pl-8">
-                        Sugars
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.SUGAR?.quantity)}
-                        {nutrients.SUGAR?.unit}
-                      </td>
-                    </tr>
-                    <tr class="bg-gray-50">
-                      <td class="py-3 px-4 text-left font-medium text-gray-600">
-                        Protein
-                      </td>
-                      <td class="py-3 px-4 text-end pr-10">
-                        {Math.round(nutrients.PROCNT?.quantity)}
-                        {nutrients.PROCNT?.unit}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <ul className="ml-5">
+                  <li>
+                    <span className="font-bold text-black-500">
+                      Dish Type :{" "}
+                    </span>{" "}
+                    {recipes.dishType}
+                  </li>
+                  <li className="pt-2">
+                    <span className="font-bold text-black-500">
+                      Cuisine Type :{" "}
+                    </span>{" "}
+                    {recipes.cuisineType}
+                  </li>
+                  <li className="pt-2">
+                    <span className="font-bold text-black-500">
+                      Meal Type :{" "}
+                    </span>{" "}
+                    {recipes.mealType}
+                  </li>
+                </ul>
+
+                
               </div>
             </div>
 
-            <div className="w-full md:w-1/3 px-4 mb-8">
+            <div className="w-full md:w-2/2 px-4 mb-8">
               <div className="rounded-md bg-white shadow-md p-8">
                 <div className="text-2xl font-bold text-red-700 mb-4">
-                  More Food Info
+                  More Recipe Info
                 </div>
-                <div class="md:flex-1 px-4">
-                <div class="flex mb-4">
-                  <div class="mr-4">
-                    <span class="font-bold text-gray-700">Yield : </span>
-                    <span class="text-gray-600">{recipes.yield}</span>
-                  </div>
-                  <div>
-                    <span class="font-bold text-gray-700">Type : </span>
-                    <span class="text-gray-600">
-                      {recipes.dishType} - {recipes.cuisineType}
-                    </span>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <span class="font-bold text-gray-700">Source :</span>
-                  <p class="text-gray-600 text-sm mt-2">{recipes.source}</p>
-                </div>
-                <div>
-                  <span class="font-bold text-gray-700">
-                    Ingredient Lines :
-                  </span>
-                  <div class="text-gray-600 text-sm mt-2"></div>
-                </div>
-              </div>
+                {/* Content Here */}
               </div>
             </div>
           </div>
