@@ -154,7 +154,7 @@ export const SingleFood = () => {
       <section className="bg-gray-200 py-1">
         <div className="container mx-auto px-2">
           <div className="flex flex-wrap -mx-4 mt-12">
-            <div className="w-full md:w-1/2 px-4 mb-8">
+            <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="rounded-md bg-white shadow-md p-8">
                 <div className="text-2xl font-bold text-red-700 mb-4">
                   Ingredients
@@ -169,7 +169,7 @@ export const SingleFood = () => {
               </div>
             </div>
 
-            <div className="w-full md:w-1/2 px-4 mb-8">
+            <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="rounded-md bg-white shadow-md p-8">
                 <div className="text-2xl font-bold text-red-700 mb-4">
                   More Recipe Info
@@ -193,20 +193,44 @@ export const SingleFood = () => {
                     </span>{" "}
                     {recipes.mealType}
                   </li>
+
+
                 </ul>
 
                 
               </div>
             </div>
 
-            <div className="w-full md:w-2/2 px-4 mb-8">
+            <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="rounded-md bg-white shadow-md p-8">
                 <div className="text-2xl font-bold text-red-700 mb-4">
-                  More Recipe Info
+                  Reference Links
                 </div>
-                {/* Content Here */}
+                <ul className="ml-5">
+                  <li>
+                    <span className="flex font-bold text-black-500">Recipe Tutorial :  </span>
+                    <Link to={recipes.url} target="_blank">{recipes.url}</Link>
+                  </li>
+                  <li className="pt-2">
+                    <span className="font-bold text-black-500">
+                      Cuisine Type :{" "}
+                    </span>{" "}
+                    {recipes.cuisineType}
+                  </li>
+                  <li className="pt-2">
+                    <span className="font-bold text-black-500">
+                      Meal Type :{" "}
+                    </span>{" "}
+                    {recipes.mealType}
+                  </li>
+
+                  
+                </ul>
+
+                
               </div>
             </div>
+
           </div>
         </div>
       </section>
