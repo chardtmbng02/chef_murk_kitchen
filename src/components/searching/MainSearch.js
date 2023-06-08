@@ -9,7 +9,7 @@ export const MainSearch = () => {
   const [previousPageUrl, setPreviousPageUrl] = useState("");
   const { recipes, loading, error } = useFetch(params.queryTerm, nextPageUrl);
 
-  const itemsPerPage = recipes.to - recipes.from + 1; 
+  const itemsPerPage = recipes.to - recipes.from + 1;
   const currentPage = Math.ceil(recipes.from / itemsPerPage);
 
   const loadNextPage = () => {
@@ -26,7 +26,7 @@ export const MainSearch = () => {
   const handlePaginationClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -72,6 +72,54 @@ export const MainSearch = () => {
   return (
     <>
       <section className="my-12 max-w-screen-xl mx-auto px-6">
+       <div className="mx-auto">
+        <form class="flex flex-col md:flex-row gap-3">
+          <div class="flex">
+            <input
+              type="text"
+              placeholder="Search for food ..."
+              class="w-full md:w-80 px-3 h-10 rounded-l border-2 border-gray-300 focus:outline-none focus:border-red-700"
+            />
+            <button
+              type="submit"
+              class="bg-red-700 text-white rounded-r px-2 md:px-3 py-0 md:py-1"
+            >
+              Search
+            </button>
+          </div>
+          <select
+            id="pricingType"
+            name="pricingType"
+            class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
+          >
+            <option value="All" selected="">
+              All
+            </option>
+            <option value="Freemium">American</option>
+            <option value="Free">Asian</option>
+            <option value="Paid">British</option>
+            <option value="Paid">British</option>
+            <option value="Paid">British</option>
+            <option value="Paid">British</option>
+            <option value="Paid">British</option>
+          </select>
+
+          <select
+            id="pricingType"
+            name="pricingType"
+            class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
+          >
+            <option value="All" selected="">
+              All
+            </option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Snack">Snack</option>
+            <option value="Teatime">Teatime</option>
+          </select>
+        </form>
+        </div>
         <div className="relative flex py-5 items-center">
           <div className="flex-grow border-t border-gray-400"></div>
           <span className="flex-shrink text-3xl poppins mx-4 text-gray-500">
@@ -123,20 +171,20 @@ export const MainSearch = () => {
           )}
         </div>
 
-               {/* Start of Pagination */}
-               <div class="text-center mx-auto max-w-lg px-4 mt-12 bg-white sm:px-6">
+        {/* Start of Pagination */}
+        <div class="text-center mx-auto max-w-lg px-4 mt-12 bg-white sm:px-6">
           <span class="text-lg text-gray-700 dark:text-gray-400">
-            Showing{' '}
+            Showing{" "}
             <span class="font-semibold text-gray-900 dark:text-white">
-              {recipes.from}{' '}
+              {recipes.from}{" "}
             </span>
-            to{' '}
+            to{" "}
             <span class="font-semibold text-gray-900 dark:text-white">
-              {recipes.to}{' '}
+              {recipes.to}{" "}
             </span>
-            of{' '}
+            of{" "}
             <span class="font-semibold text-gray-900 dark:text-white">
-              {recipes.count}{' '}
+              {recipes.count}{" "}
             </span>
             Recipes
           </span>
@@ -170,15 +218,15 @@ export const MainSearch = () => {
                       d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
                       clip-rule="evenodd"
                     ></path>
-                  </svg>{' '}
+                  </svg>{" "}
                   Previous Page
                 </button>
               ) : (
                 <button
-                onClick={() => {
-                  loadPreviousPage();
-                  handlePaginationClick();
-                }}
+                  onClick={() => {
+                    loadPreviousPage();
+                    handlePaginationClick();
+                  }}
                   type="button"
                   className="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-l-md"
                   data-id="pagination-prev"
@@ -199,7 +247,7 @@ export const MainSearch = () => {
                       d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
                       clip-rule="evenodd"
                     ></path>
-                  </svg>{' '}
+                  </svg>{" "}
                   Previous Page
                 </button>
               )}
@@ -211,7 +259,7 @@ export const MainSearch = () => {
                   className="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl   font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-r-md opacity-50 cursor-not-allowed"
                   data-id="pagination-next"
                 >
-                  Next Page{' '}
+                  Next Page{" "}
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -232,15 +280,15 @@ export const MainSearch = () => {
                 </button>
               ) : (
                 <button
-                onClick={() => {
-                  loadNextPage();
-                  handlePaginationClick();
-                }}
+                  onClick={() => {
+                    loadNextPage();
+                    handlePaginationClick();
+                  }}
                   type="button"
                   className="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl   font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-r-md"
                   data-id="pagination-next"
                 >
-                  Next Page{' '}
+                  Next Page{" "}
                   <svg
                     stroke="currentColor"
                     fill="currentColor"

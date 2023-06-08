@@ -45,8 +45,8 @@ export const SingleFood = () => {
           </span>
           <div className="flex-grow border-t border-gray-400"></div>
         </div>
-        <h5 className="poppins text-gray-500 pb-5 text-center">
-          Deliciously crafted flavors, made with love and precision.
+        <h5 className="text-xl poppins text-gray-500 pb-5 text-center">
+          {recipes.label}
         </h5>
 
         <div class="py-8">
@@ -194,6 +194,34 @@ export const SingleFood = () => {
                     {recipes.mealType}
                   </li>
 
+                  <li className="pt-2">
+                    <span className="font-bold text-black-500">
+                    Cautions :{" "}
+                    </span>
+                    {recipes.cautions}
+                  </li>
+
+                  <li className="pt-2">
+                    <span className="font-bold text-black-500">
+                    Yield :{" "}
+                    </span>
+                    {recipes.yield}
+                  </li>
+
+                  <li className="pt-2">
+                    <span className="font-bold text-black-500">
+                    Daily Weight :{" "}
+                    </span>
+                    {recipes.totalWeight}
+                  </li>
+
+                  <li className="pt-2">
+                    <span className="font-bold text-black-500">
+                    Cooking Time :{" "}
+                    </span>
+                    {recipes.totalTime} Mins
+                  </li>
+
 
                 </ul>
 
@@ -208,23 +236,15 @@ export const SingleFood = () => {
                 </div>
                 <ul className="ml-5">
                   <li>
-                    <span className="flex font-bold text-black-500">Recipe Tutorial :  </span>
-                    <Link to={recipes.url} target="_blank">{recipes.url}</Link>
+                    <span className="flex font-bold text-black-500">Tutorial :  </span>
+                    <Link to={recipes.url} target="_blank" className="text-gray-600 hover:text-red-600">Open Website</Link>
                   </li>
-                  <li className="pt-2">
-                    <span className="font-bold text-black-500">
-                      Cuisine Type :{" "}
-                    </span>{" "}
-                    {recipes.cuisineType}
+                  <li>
+                    <span className="flex font-bold text-black-500 mt-2">ShareAs :  </span>
+                    <Link to={recipes.shareAs} target="_blank" className="text-gray-600 hover:text-red-600">Open Website</Link>
                   </li>
-                  <li className="pt-2">
-                    <span className="font-bold text-black-500">
-                      Meal Type :{" "}
-                    </span>{" "}
-                    {recipes.mealType}
-                  </li>
-
-                  
+                 
+   
                 </ul>
 
                 
