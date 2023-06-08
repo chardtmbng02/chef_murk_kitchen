@@ -23,6 +23,13 @@ export const MainSearch = () => {
     setPreviousPageUrl("");
   };
 
+  const handlePaginationClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   if (loading) {
     return (
       <div class="murk-success-fetch absolute bg-white z-20 h-full w-full flex items-center justify-center">
@@ -168,7 +175,10 @@ export const MainSearch = () => {
                 </button>
               ) : (
                 <button
-                  onClick={loadPreviousPage}
+                onClick={() => {
+                  loadPreviousPage();
+                  handlePaginationClick();
+                }}
                   type="button"
                   className="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-l-md"
                   data-id="pagination-prev"
@@ -222,7 +232,10 @@ export const MainSearch = () => {
                 </button>
               ) : (
                 <button
-                  onClick={loadNextPage}
+                onClick={() => {
+                  loadNextPage();
+                  handlePaginationClick();
+                }}
                   type="button"
                   className="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl   font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-r-md"
                   data-id="pagination-next"
