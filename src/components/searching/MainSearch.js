@@ -62,16 +62,26 @@ export const MainSearch = () => {
   return (
     <>
       <section className="my-12 max-w-screen-xl mx-auto px-6">
+        <div className="relative flex py-5 items-center">
+          <div className="flex-grow border-t border-gray-400"></div>
+          <span className="flex-shrink text-3xl poppins mx-4 text-gray-500">
+            Search Results
+          </span>
+          <div className="flex-grow border-t border-gray-400"></div>
+        </div>
+        <h5 className="poppins text-gray-500 pb-4 text-center">
+          Explore the Top Recipes from around the globe.
+        </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {recipes.hits.length > 0 ? (
-            recipes.hits.map((recipe) => (
+            recipes.hits.slice(0, 18).map((recipe) => (
               <Link
                 to={`../recipe/details/recipe_${
                   recipe.recipe.uri.split("_")[1]
                 }`}
               >
                 <div
-                  className="text-center bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
+                  className="text-center bg-white shadow-xl border border-gray-100 transition transform duration-700 hover:shadow-2xl hover:scale-105 p-4 rounded-lg relative"
                   key={recipe.recipe.uri}
                 >
                   <span
@@ -132,6 +142,7 @@ export const MainSearch = () => {
               </svg>
               Previous
             </button>
+            <span className="relative inline-flex items-center px-2 py-2 text-gray-400">Page 1</span>
             <button
               onClick={loadNextPage}
               type="button"
@@ -151,14 +162,26 @@ export const MainSearch = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" ></path>
+                  fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd"
+                ></path>
               </svg>
             </button>
           </div>
+          
           <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-            <div class="relative z-0 flex justify-between w-full -space-x-px rounded-md" aria-label="Pagination"
+            <div
+              class="relative z-0 flex justify-between w-full -space-x-px rounded-md"
+              aria-label="Pagination"
             >
-              <button onClick={loadPreviousPage} type="button" class="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-l-md opacity-50 " data-id="pagination-prev" disabled="" >
+              <button
+                onClick={loadPreviousPage}
+                type="button"
+                class="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-l-md opacity-50 "
+                data-id="pagination-prev"
+                disabled=""
+              >
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -178,6 +201,7 @@ export const MainSearch = () => {
                 </svg>
                 Previous Page
               </button>
+              <span className="relative inline-flex items-center px-2 py-2 text-gray-700">Page 1</span>
               <button
                 onClick={loadNextPage}
                 type="button"

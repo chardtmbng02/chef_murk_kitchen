@@ -56,13 +56,13 @@ export const FoodList = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {recipes.hits.length > 0 ? (
-            recipes.hits.slice(1, 7).map((recipe) => (
+            recipes.hits.slice(5, 14).map((recipe) => (
               
               <Link
               to={`recipe/details/${recipe.recipe.uri.split('_')[1]}`}
             >
               <div
-                className="text-center bg-white shadow-xl border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
+                className="text-center bg-white shadow-xl border border-gray-100 transition transform duration-700 hover:shadow-2xl hover:scale-105 p-4 rounded-lg relative"
                 key={recipe.recipe.uri}
               >
                 <span

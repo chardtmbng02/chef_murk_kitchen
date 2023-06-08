@@ -25,6 +25,7 @@ export const MainHeader = () => {
 
   return (
     <section className="relative murk-header-padding-top bg-slate-50 header-banner h-full">
+      
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex justify-center items-center">
           <div className="w-full lg:w-1/2">
@@ -75,7 +76,7 @@ export const MainHeader = () => {
                       </span>
                     </button>
                   </Link>
-                </div>
+                </div> 
               </form>
             </div>
           </div>
