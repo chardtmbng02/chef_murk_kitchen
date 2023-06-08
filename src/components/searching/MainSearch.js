@@ -9,6 +9,9 @@ export const MainSearch = () => {
   const [previousPageUrl, setPreviousPageUrl] = useState("");
   const { recipes, loading, error } = useFetch(params.queryTerm, nextPageUrl);
 
+  const itemsPerPage = recipes.to - recipes.from + 1;
+  const currentPage = Math.ceil(recipes.from / itemsPerPage);
+
   const loadNextPage = () => {
     setPreviousPageUrl(nextPageUrl);
     console.log(nextPageUrl);
@@ -114,6 +117,24 @@ export const MainSearch = () => {
         </div>
 
         {/* Start of Pagination */}
+        <div class="text-center mx-auto max-w-lg px-4 mt-12 bg-white sm:px-6">
+          <span class="text-lg text-gray-700 dark:text-gray-400">
+            Showing{' '}
+            <span class="font-semibold text-gray-900 dark:text-white">
+              {recipes.from}{' '}
+            </span>
+            to{' '}
+            <span class="font-semibold text-gray-900 dark:text-white">
+              {recipes.to}{' '}
+            </span>
+            of{' '}
+            <span class="font-semibold text-gray-900 dark:text-white">
+              {recipes.count}{' '}
+            </span>
+            Recipes
+          </span>
+        </div>
+
         <div class="flex flex-1 mx-auto w-100 max-w-lg px-4 py-3 mt-12 bg-white border-t border-gray-200 shadow-md sm:px-6">
           <div class="flex justify-between flex-1 sm:hidden">
             <button
@@ -142,7 +163,6 @@ export const MainSearch = () => {
               </svg>
               Previous
             </button>
-            <span className="relative inline-flex items-center px-2 py-2 text-gray-400">Page 1</span>
             <button
               onClick={loadNextPage}
               type="button"
@@ -162,26 +182,14 @@ export const MainSearch = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clip-rule="evenodd"
-                ></path>
+                  fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" ></path>
               </svg>
             </button>
           </div>
-          
           <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-            <div
-              class="relative z-0 flex justify-between w-full -space-x-px rounded-md"
-              aria-label="Pagination"
+            <div class="relative z-0 flex justify-between w-full -space-x-px rounded-md" aria-label="Pagination"
             >
-              <button
-                onClick={loadPreviousPage}
-                type="button"
-                class="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-l-md opacity-50 "
-                data-id="pagination-prev"
-                disabled=""
-              >
+              <button onClick={loadPreviousPage} type="button" class="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-l-md opacity-50 " data-id="pagination-prev" disabled="" >
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -201,7 +209,6 @@ export const MainSearch = () => {
                 </svg>
                 Previous Page
               </button>
-              <span className="relative inline-flex items-center px-2 py-2 text-gray-700">Page 1</span>
               <button
                 onClick={loadNextPage}
                 type="button"
