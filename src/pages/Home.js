@@ -7,6 +7,7 @@ import { ChefDetails } from "../components/Chefs/ChefDetails";
 import { useTitle } from "../hooks/useTitle";
 import { useEffect } from "react";
 import { Developers } from "../components/DevelopmentTeam/Developers";
+import ScrollToTop from "react-scroll-to-top";
 
 export const Home = () => {
   useTitle("Chef Murk Kitchen | Homepage");
@@ -23,6 +24,7 @@ export const Home = () => {
     <ChefDetails />
     <Developers />
     <Footer />
+    <ScrollToTop smooth />
     </>
   )
 }

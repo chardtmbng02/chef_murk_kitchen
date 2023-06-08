@@ -1,10 +1,9 @@
-import "../Contact/Contact.css"
+import "../Contact/Contact.css";
 
 export const Contact = () => {
   return (
-    <section className="bg-white mx-auto">
-
-<div className="container mx-auto my-10 px-10">
+    <section className="relative bg-slate-50 h-full">
+     <div id="fdlst" className="max-w-screen-xl mx-auto my-12 px-6">
         <div className="relative flex py-5 items-center">
           <div className="flex-grow border-t border-gray-400"></div>
           <span className="flex-shrink text-3xl poppins mx-4 text-gray-500">
@@ -12,21 +11,21 @@ export const Contact = () => {
           </span>
           <div className="flex-grow border-t border-gray-400"></div>
         </div>
-        <h5 className="poppins text-gray-500 pb-5 mb-5 text-center">
-          We are here to help you.
+        <h5 className="poppins text-gray-500 pb-4 text-center">
+          How can we help you
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <form>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm mb-2" for="name">
+                <label className="block text-gray-700 text-sm mb-2 text-red-700" for="name">
                   Fields are required *
                 </label>
                 <label
                   className="block text-gray-700 font-semibold mb-2"
                   for="name"
                 >
-                  Name
+                  Name *
                 </label>
                 <input
                   className="w-full px-4 py-3 rounded-lg ring-red-400 focus:ring-4 focus:outline-none transition duration-300 border border-gray-300 focus:shadow-xl"
@@ -42,7 +41,7 @@ export const Contact = () => {
                   className="block text-gray-700 font-semibold mb-2"
                   for="email"
                 >
-                  Email
+                  Email *
                 </label>
                 <input
                   className="w-full px-4 py-3 rounded-lg ring-red-400 focus:ring-4 focus:outline-none transition duration-300 border border-gray-300 focus:shadow-xl"
@@ -58,7 +57,7 @@ export const Contact = () => {
                   className="block text-gray-700 font-semibold mb-2"
                   for="message"
                 >
-                  Message
+                  Message *
                 </label>
                 <textarea
                   className="w-full px-4 py-3 rounded-lg ring-red-400 focus:ring-4 focus:outline-none transition duration-300 border border-gray-300 focus:shadow-xl"
@@ -82,12 +81,14 @@ export const Contact = () => {
             <p className="mb-2">
               Lawton Ave, Mckinley West, Taguig, 1634 Metro Manila, Philippines.
             </p>
-            <p className="mb-2"><i className="faphone"></i>+63 930 080 3710</p>
+            <p className="mb-2">
+              <i className="faphone"></i>+63 930 080 3710
+            </p>
             <p className="mb-2">sup.murktechsolutions@gmail.com</p>
-            
-            <div className="murk-map border border-gray-300 shadow-2xl my-6"
-            >
-              <iframe className="map-frame"
+
+            <div className="murk-map border border-gray-300 shadow-2xl my-6">
+              <iframe
+                className="map-frame"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1931.0618660746197!2d121.04277071374109!3d14.534914346107314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9e6b026ea17%3A0xa44a6fefb6015924!2sErnst%20%26%20Young%20Global%20Services%20(Philippines)%20Inc!5e0!3m2!1sen!2sph!4v1686134835638!5m2!1sen!2sph"
                 width="100%"
                 height="150%"
@@ -159,9 +160,6 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-
-      
-      
     </section>
   );
 };

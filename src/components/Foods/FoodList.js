@@ -62,7 +62,7 @@ export const FoodList = () => {
               to={`recipe/details/${recipe.recipe.uri.split('_')[1]}`}
             >
               <div
-                className="text-center bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
+                className="text-center bg-white shadow-xl border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
                 key={recipe.recipe.uri}
               >
                 <span
@@ -80,10 +80,10 @@ export const FoodList = () => {
                     {recipe.recipe.label}
                   </h1>
                   <p className="text-gray-500 poppins text-sm text-center">
-                    Dish Type : {recipe.recipe.dishType}
+                    Dish : {recipe.recipe.dishType}
                   </p>
                   <p className="text-gray-500 poppins text-sm text-center">
-                    Cuisine Type : {recipe.recipe.cuisineType}
+                    Cuisine : {recipe.recipe.cuisineType} 
                   </p>
 
                 </div>
@@ -94,7 +94,6 @@ export const FoodList = () => {
             <span>No Recipe's Found</span>
           )}
         </div>
-
       </div>
     </section>
   );

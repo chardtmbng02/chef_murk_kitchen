@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-// import { API_ID, API_KEY } from "../constant/index";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 import { NavigationBar } from "../components/Navbar/NavigationBar";
 import { SubHeader } from "../components/Header/SubHeader";
 import { Footer } from "../components/Footer/Footer";
 import { SingleFood } from "../components/Foods/SingleFood";
-// import { FoodSection } from "../components/Foods/FoodSection";
+import ScrollToTop from "react-scroll-to-top";
 
 export const RecipeDetails = () => {
   const params = useParams();
@@ -43,8 +42,8 @@ export const RecipeDetails = () => {
       <NavigationBar />
       <SubHeader />
       <SingleFood />
-      {/* <FoodSection /> */}
       <Footer />
+      <ScrollToTop smooth />
     </>
   );
 };

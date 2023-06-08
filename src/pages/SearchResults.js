@@ -6,6 +6,7 @@ import { Footer } from "../components/Footer/Footer";
 import { MainSearch } from "../components/searching/MainSearch";
 import { useEffect } from "react";
 import { SubHeader } from "../components/Header/SubHeader";
+import ScrollToTop from "react-scroll-to-top";
 
 export const SearchResults = () => {
 
@@ -23,6 +24,7 @@ export const SearchResults = () => {
     <SubHeader />
     <MainSearch /> 
     <Footer />
+    <ScrollToTop smooth/>
     </>
   )
 }

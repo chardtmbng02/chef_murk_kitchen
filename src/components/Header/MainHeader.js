@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/Header-Images/header-pic.jpg";
+import Logo from "../../assets/Header-Images/header-pic.png";
+import Logo2 from "../../assets/Header-Images/header-pic-2.png";
+import Logo3 from "../../assets/Header-Images/header-pic-3.png";
 
 import { Carousel, initTE } from "tw-elements";
 
@@ -91,21 +93,21 @@ export const MainHeader = () => {
                     data-te-carousel-item
                     data-te-carousel-active
                   >
-                    <img src={Logo} class="block w-full" alt="Wild Landscape" />
+                    <img src={Logo} class="block w-full" alt="hdp1" />
                   </div>
 
                   <div
                     class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                     data-te-carousel-item
                   >
-                    <img src={Logo} class="block w-full" alt="Camera" />
+                    <img src={Logo2} class="block w-full" alt="hdp2" />
                   </div>
 
                   <div
                     class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                     data-te-carousel-item
                   >
-                    <img src={Logo} class="block w-full" alt="Exotic Fruits" />
+                    <img src={Logo3} class="block w-full" alt="hdp3" />
                   </div>
                 </div>
               </div>
