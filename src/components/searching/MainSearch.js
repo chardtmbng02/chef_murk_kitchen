@@ -60,8 +60,11 @@ export const MainSearch = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {recipes.hits.length > 0 ? (
             recipes.hits.map((recipe) => (
+              <Link
+              to={`recipe/details/recipe_${recipe.recipe.uri.split('_')[1]}`}
+            >
               <div
-                className="bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
+                className="text-center bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
                 key={recipe.recipe.uri}
               >
                 <span
@@ -72,35 +75,28 @@ export const MainSearch = () => {
                 <img
                   className="w-64 mx-auto transform transition duration-300 hover:scale-105 rounded-3xl"
                   src={recipe.recipe.image}
-                  alt="recipe"
+                  alt="img-recipe"
                 />
                 <div className="flex flex-col items-center my-3 space-y-2">
-                  <h1 className="text-gray-900 poppins text-lg">
+                  <h1 className="text-gray-900 poppins text-center text-md food-label">
                     {recipe.recipe.label}
                   </h1>
                   <p className="text-gray-500 poppins text-sm text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quis ad ducimus reiciendis tempore sed perferendis.
+                    Dish Type : {recipe.recipe.dishType}
                   </p>
-                  <h4 className="text-gray-900 poppins font-bold">
-                    Cook Time: {recipe.recipe.totalTime}
-                  </h4>
-                  <button className="bg-primary text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:scale-105">
-                    <Link
-                      to={`../recipe/details/recipe_${
-                        recipe.recipe.uri.split('_')[1]
-                      }`}
-                    >
-                      Show Recipe
-                    </Link>
-                  </button>
+                  <p className="text-gray-500 poppins text-sm text-center">
+                    Cuisine Type : {recipe.recipe.cuisineType}
+                  </p>
+
                 </div>
               </div>
+              </Link>
             ))
           ) : (
             <span>No Recipe to display</span>
           )}
         </div>
+        
         {/* Start of Pagination */}
         <div class="flex flex-1 mx-auto w-100 max-w-lg px-4 py-3 mt-12 bg-white border-t border-gray-200 shadow-md sm:px-6">
           <div class="flex justify-between flex-1 sm:hidden">

@@ -42,7 +42,7 @@ export const FoodList = () => {
 
   return (
     <section className="my-12 max-w-screen-xl mx-auto px-6">
-      <div id="our chef" className="max-w-screen-xl mx-auto my-12 px-6">
+      <div id="fdlst" className="max-w-screen-xl mx-auto my-12 px-6">
         <div className="relative flex py-5 items-center">
           <div className="flex-grow border-t border-gray-400"></div>
           <span className="flex-shrink text-3xl poppins mx-4 text-gray-500">
@@ -76,7 +76,7 @@ export const FoodList = () => {
                   alt="img-recipe"
                 />
                 <div className="flex flex-col items-center my-3 space-y-2">
-                  <h1 className="text-gray-900 poppins text-center text-md">
+                  <h1 className="text-gray-900 poppins text-center text-md food-label">
                     {recipe.recipe.label}
                   </h1>
                   <p className="text-gray-500 poppins text-sm text-center">
@@ -86,13 +86,6 @@ export const FoodList = () => {
                     Cuisine Type : {recipe.recipe.cuisineType}
                   </p>
 
-                  {/* <button className="bg-red-700 text-white px-8 py-2 focus:outline-none poppins rounded-full mt-24 transform transition duration-300 hover:bg-red-600 scale-105">
-                    <Link
-                      to={`recipe/details/${recipe.recipe.uri.split('_')[1]}`}
-                    >
-                      Show Recipe
-                    </Link>
-                  </button> */}
                 </div>
               </div>
               </Link>

@@ -13,3 +13,12 @@
   background-position: center;
   background-size: cover;
 }
+
+.header-carousel-box {
+  width: 100%;
+  height: 100%;
+}
+
+.murk-header-padding-top{
+  padding-top: 120px;
+}

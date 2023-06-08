@@ -45,7 +45,7 @@ export const SubSearch = () => {
               </button>
             </div>
 
-            {/* <select
+            <select
               id="Type"
               name="Type"
               class="w-full h-10 border-2 border-red-500 focus:outline-none focus:border-red-500 text-red-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
@@ -56,7 +56,7 @@ export const SubSearch = () => {
               <option value="opt1">Asian</option>
               <option value="opt2">Chinese</option>
               <option value="opt3">American</option>
-            </select> */}
+            </select>
           </form>
         </div>
       </section>

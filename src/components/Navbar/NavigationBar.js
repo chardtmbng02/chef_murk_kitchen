@@ -44,7 +44,7 @@ export const NavigationBar = () => {
         <nav className="navigation" ref={navRef}>
           <Link to="/">Home</Link>
           <Link to="/search">Search</Link>
-          <Link to="/contact">Contact Us</Link>
+          {/* <Link to="/contact">Contact Us</Link> */}
           <Link to="/signin">Sign In</Link>
           <Link to="/signup"><button className="bg-red-700 px-6 py-3 text-white poppins rounded-full ring-red-300 focus:outline-none focus:ring-4 transform transition duration-700 hover:bg-red-600 scale-105">
                   Get Started

@@ -1,73 +1,20 @@
-import Logo from "../../assets/Contact-Images/address-map.png"
 import "../Contact/Contact.css"
 
 export const Contact = () => {
   return (
     <section className="bg-white mx-auto">
-      <div class="murk-nav-bg mb-5">
-        <div class="max-w-screen-xl mx-auto pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:pt-20 lg:pb-28 lg:px-8">
-          <h2 class="text-3xl leading-9 font-extrabold text-gray-700 text-center">
-            Frequently asked questions
-          </h2>
-          <div class="mt-6 border-t-4 border-gray-700 pt-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 md:gap-y-12">
-              <dl>
-                <dt class="font-medium leading-6 text-gray-900 text-lg mt-4">
-                  What is Chef Murk Kitchen?
-                </dt>
-                <dd class="mt-4">
-                  <p class="leading-6 text-base text-gray-500">
-                    Our return policy allows customers to return products within
-                    30 days of purchase for a full refund or exchange.
-                  </p>
-                </dd>
-              </dl>
 
-              <dl>
-                <dt class="font-medium leading-6 text-gray-900 text-lg mt-4">
-                  Am I required to register my own account?
-                </dt>
-                <dd class="mt-4">
-                  <p class="leading-6 text-base text-gray-500">
-                    You can track your order by logging into your account on our
-                    website and viewing the tracking information provided.
-                  </p>
-                </dd>
-              </dl>
-
-              <dl>
-                <dt class="font-medium leading-6 text-gray-900 text-lg mt-4">
-                  What are the different cuisine type you offers?
-                </dt>
-                <dd class="mt-4">
-                  <p class="leading-6 text-base text-gray-500">
-                    We offer standard and expedited shipping options for all
-                    orders. Delivery times and prices will vary depending on
-                    your location and the size of your order.
-                  </p>
-                </dd>
-              </dl>
-
-              <dl>
-                <dt class="font-medium leading-6 text-gray-900 text-lg mt-4">
-                  What are the hours of operation?
-                </dt>
-                <dd class="mt-4">
-                  <p class="leading-6 text-base text-gray-500">
-                    Our customer service department is open Monday-Friday,
-                    9am-5pm EST.
-                  </p>
-                </dd>
-              </dl>
-            </div>
-          </div>
+<div className="container mx-auto my-10 px-10">
+        <div className="relative flex py-5 items-center">
+          <div className="flex-grow border-t border-gray-400"></div>
+          <span className="flex-shrink text-3xl poppins mx-4 text-gray-500">
+            Contact Us
+          </span>
+          <div className="flex-grow border-t border-gray-400"></div>
         </div>
-      </div>
-
-      <div className="container mx-auto my-20 px-10">
-        <h2 className="text-3xl font-semibold mb-20 text-center">
-          Let's Start a Conversation
-        </h2>
+        <h5 className="poppins text-gray-500 pb-5 mb-5 text-center">
+          We are here to help you.
+        </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <form>
@@ -149,10 +96,72 @@ export const Contact = () => {
                 loading="lazy"
               ></iframe>
             </div>
-
           </div>
         </div>
       </div>
+
+      <div class="murk-nav-bg">
+        <div class="max-w-screen-xl mx-auto pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:pt-20 lg:pb-28 lg:px-8">
+          <h2 class="text-3xl leading-9 font-extrabold text-gray-700 text-center">
+            Frequently asked questions
+          </h2>
+          <div class="mt-6 border-t-4 border-gray-700 pt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 md:gap-y-12">
+              <dl>
+                <dt class="font-medium leading-6 text-gray-900 text-lg mt-4">
+                  What is Chef Murk Kitchen?
+                </dt>
+                <dd class="mt-4">
+                  <p class="leading-6 text-base text-gray-500">
+                    Our return policy allows customers to return products within
+                    30 days of purchase for a full refund or exchange.
+                  </p>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt class="font-medium leading-6 text-gray-900 text-lg mt-4">
+                  Am I required to register my own account?
+                </dt>
+                <dd class="mt-4">
+                  <p class="leading-6 text-base text-gray-500">
+                    You can track your order by logging into your account on our
+                    website and viewing the tracking information provided.
+                  </p>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt class="font-medium leading-6 text-gray-900 text-lg mt-4">
+                  What are the different cuisine type you offers?
+                </dt>
+                <dd class="mt-4">
+                  <p class="leading-6 text-base text-gray-500">
+                    We offer standard and expedited shipping options for all
+                    orders. Delivery times and prices will vary depending on
+                    your location and the size of your order.
+                  </p>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt class="font-medium leading-6 text-gray-900 text-lg mt-4">
+                  What are the hours of operation?
+                </dt>
+                <dd class="mt-4">
+                  <p class="leading-6 text-base text-gray-500">
+                    Our customer service department is open Monday-Friday,
+                    9am-5pm EST.
+                  </p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
     </section>
   );
 };

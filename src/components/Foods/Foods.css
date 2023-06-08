@@ -3,3 +3,15 @@
     height: 100%;
     min-width: 300px;
   }
+
+  .food-label {
+    /* display: inline-block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+
+  }

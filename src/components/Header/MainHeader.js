@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import header_pic  from "../../assets/Header-Images/header-pic.jpg"
+import Logo from "../../assets/Header-Images/header-pic.jpg";
+
+import { Carousel, initTE } from "tw-elements";
 
 export const MainHeader = () => {
+
+  useEffect(() => {
+    initTE({ Carousel });
+  }, []);
+
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e) => {
@@ -15,18 +22,15 @@ export const MainHeader = () => {
   };
 
   return (
-    
-    <section className="relative py-28 bg-slate-50 header-banner h-full">   
+    <section className="relative murk-header-padding-top bg-slate-50 header-banner h-full">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex justify-center items-center">
           <div className="w-full lg:w-1/2">
             <div className="text-center lg:text-left mb-6">
               <h1 className="max-w-lg mx-auto lg:mx-0 text-3xl md:text-5xl font-bold mb-5 text-gray-900">
-                <span className="block murk-text-red-700">
-                Feast Your Eyes
-                </span>
+                <span className="block murk-text-red-700">Feast Your Eyes</span>
                 <span className="murk-textcolor-secondary">
-                Where Taste Meets Imagination
+                  Where Taste Meets Imagination
                 </span>
               </h1>
               <p className="max-w-lg mx-auto lg:mx-0 text-gray-700">
@@ -46,11 +50,25 @@ export const MainHeader = () => {
                     className="-my-2 flex-auto pl-6 pr-2 text-base text-slate-900 focus:outline-none"
                   />
                   <Link to={`search/${inputValue}`}>
-                    <button className="inline-flex justify-center rounded-lg bg-red-700 p-2.5 text-base text-white hover:bg-red-600 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 active:text-white/70" type="submit">
+                    <button
+                      className="inline-flex justify-center rounded-lg bg-red-700 p-2.5 text-base text-white hover:bg-red-600 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 active:text-white/70"
+                      type="submit"
+                    >
                       <span className="sr-only sm:not-sr-only">Search Now</span>
                       <span className="sm:hidden">
-                        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6">
-                          <path d="m14 7 5 5-5 5M19 12H5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                        <svg
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          className="h-6 w-6"
+                        >
+                          <path
+                            d="m14 7 5 5-5 5M19 12H5"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
                         </svg>
                       </span>
                     </button>
@@ -60,17 +78,39 @@ export const MainHeader = () => {
             </div>
           </div>
           <div className="w-full lg:w-1/2 hidden lg:block lg:flex justify-center mr-6">
-            <div className="rounded-3xl shadow-lg shadow-gray-40 overflow-hidden">
-              <img
-                className="w-full h-full object-cover header-pic"
-                src={header_pic}
-                alt="foodpic"
-              />
+            <div className="rounded-3xl border border-gray-700 header-carousel-box shadow-2xl overflow-hidden">
+              <div
+                id="cmk-crsl"
+                class="relative"
+                data-te-carousel-init
+                data-te-carousel-slide
+              >
+                <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+                  <div
+                    class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    data-te-carousel-item
+                    data-te-carousel-active
+                  >
+                    <img src={Logo} class="block w-full" alt="Wild Landscape" />
+                  </div>
+
+                  <div
+                    class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    data-te-carousel-item
+                  >
+                    <img src={Logo} class="block w-full" alt="Camera" />
+                  </div>
+
+                  <div
+                    class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    data-te-carousel-item
+                  >
+                    <img src={Logo} class="block w-full" alt="Exotic Fruits" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-
- 
         </div>
       </div>
     </section>

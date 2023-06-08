@@ -21,7 +21,7 @@ export const SearchResults = () => {
     <>
     <NavigationBar />
     <SubHeader />
-    <MainSearch />
+    <MainSearch /> 
     <Footer />
     </>
   )
