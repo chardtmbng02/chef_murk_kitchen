@@ -7,7 +7,6 @@ import { RecipeDetails } from "./pages/RecipeDetails";
 import { SearchResults } from "./pages/SearchResults";
 import { SignIn } from "./pages/SignIn";
 import { SignUp } from "./pages/SignUp";
-// import { Search } from "./pages/Search";
 import { Playground } from "./pages/Playground";
 import { ContactUs } from "./pages/ContactUs";
 
@@ -25,7 +24,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
-          {/* <Route path="/search" element={<Search />}></Route> */}
+          <Route path="/search" element={<SearchResults />}></Route>
           <Route path="/playground" element={<Playground />}></Route>
           <Route path="/search/:queryTerm" element={<SearchResults />} />
           <Route path="/search/:queryTerm/*" element={<ErrorMessage />} />
