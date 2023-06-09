@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useFetch = (queryTerm, nextPageUrl) => {
+const useFetch = (queryTerm, nextPageUrl, cuisineType, mealType) => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,7 +18,6 @@ const useFetch = (queryTerm, nextPageUrl) => {
         } else if (cuisineType !== 'All' && mealType !== 'All') {
           url = url + `&cuisineType=${cuisineType}&mealType=${mealType}`;
         }
-
 
         const response = await fetch(url);
         if (!response.ok) {
