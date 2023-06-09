@@ -4,7 +4,6 @@ const useFetch = (queryTerm, nextPageUrl) => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log(nextPageUrl);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,7 +11,14 @@ const useFetch = (queryTerm, nextPageUrl) => {
         let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${queryTerm}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}`;
         if (nextPageUrl) {
           url = nextPageUrl;
+        } else if (cuisineType !== 'All' && mealType === 'All') {
+          url = url + `&cuisineType=${cuisineType}`;
+        } else if (cuisineType === 'All' && mealType !== 'All') {
+          url = url + `&mealType=${mealType}`;
+        } else if (cuisineType !== 'All' && mealType !== 'All') {
+          url = url + `&cuisineType=${cuisineType}&mealType=${mealType}`;
         }
+
 
         const response = await fetch(url);
         if (!response.ok) {
@@ -28,7 +34,7 @@ const useFetch = (queryTerm, nextPageUrl) => {
     };
 
     fetchData();
-  }, [nextPageUrl]);
+  }, [nextPageUrl, queryTerm, cuisineType, mealType]);
 
   return { recipes, loading, error };
 };

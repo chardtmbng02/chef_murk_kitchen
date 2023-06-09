@@ -1,8 +1,36 @@
 import { Link } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
+import { useState, useEffect } from 'react';
 
 export const FoodList = () => {
-  const { recipes, loading, error } = useFetch();
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://api.edamam.com/api/recipes/v2?type=public&q=popular&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}`
+        );
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch recipes');
+        }
+        const data = await response.json();
+        setRecipes(data);
+        console.log(data);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(recipes);
 
   if (loading) {
     return (
@@ -60,37 +88,33 @@ export const FoodList = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {recipes.hits.length > 0 ? (
             recipes.hits.slice(5, 14).map((recipe) => (
-              
-              <Link
-              to={`recipe/details/${recipe.recipe.uri.split('_')[1]}`}
-            >
-              <div
-                className="text-center bg-white shadow-xl border border-gray-100 transition transform duration-700 hover:shadow-2xl hover:scale-105 p-4 rounded-lg relative"
-                key={recipe.recipe.uri}
-              >
-                <span
-                  className={`${recipe.recipe.mealType} bg-red-100 border border-red-500 rounded-full text-primary text-sm poppins px-4 py-1 inline-block mb-4`}
+              <Link to={`recipe/details/${recipe.recipe.uri.split('_')[1]}`}>
+                <div
+                  className="text-center bg-white shadow-xl border border-gray-100 transition transform duration-700 hover:shadow-2xl hover:scale-105 p-4 rounded-lg relative"
+                  key={recipe.recipe.uri}
                 >
-                  {recipe.recipe.mealType}
-                </span>
-                <img
-                  className="w-64 mx-auto transform transition duration-300 hover:scale-105 rounded-3xl"
-                  src={recipe.recipe.image}
-                  alt="img-recipe"
-                />
-                <div className="flex flex-col items-center my-3 space-y-2">
-                  <h1 className="text-gray-900 poppins text-center text-md food-label">
-                    {recipe.recipe.label}
-                  </h1>
-                  <p className="text-gray-500 poppins text-sm text-center">
-                    Dish : {recipe.recipe.dishType}
-                  </p>
-                  <p className="text-gray-500 poppins text-sm text-center">
-                    Cuisine : {recipe.recipe.cuisineType} 
-                  </p>
-
+                  <span
+                    className={`${recipe.recipe.mealType} bg-red-100 border border-red-500 rounded-full text-primary text-sm poppins px-4 py-1 inline-block mb-4`}
+                  >
+                    {recipe.recipe.mealType}
+                  </span>
+                  <img
+                    className="w-64 mx-auto transform transition duration-300 hover:scale-105 rounded-3xl"
+                    src={recipe.recipe.image}
+                    alt="img-recipe"
+                  />
+                  <div className="flex flex-col items-center my-3 space-y-2">
+                    <h1 className="text-gray-900 poppins text-center text-md food-label">
+                      {recipe.recipe.label}
+                    </h1>
+                    <p className="text-gray-500 poppins text-sm text-center">
+                      Dish : {recipe.recipe.dishType}
+                    </p>
+                    <p className="text-gray-500 poppins text-sm text-center">
+                      Cuisine : {recipe.recipe.cuisineType}
+                    </p>
+                  </div>
                 </div>
-              </div>
               </Link>
             ))
           ) : (

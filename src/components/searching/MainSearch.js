@@ -1,33 +1,65 @@
-import React from "react";
-import useFetch from "../../hooks/useFetch";
-import { Link, useParams } from "react-router-dom";
-import { useState } from "react";
+import React from 'react';
+import useFetch from '../../hooks/useFetch';
+import { Link, useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const MainSearch = () => {
   const params = useParams();
-  const [nextPageUrl, setNextPageUrl] = useState("");
-  const [previousPageUrl, setPreviousPageUrl] = useState("");
-  const { recipes, loading, error } = useFetch(params.queryTerm, nextPageUrl);
+  const navigate = useNavigate();
+  const [inputValue, setInputValue] = useState('');
+  const [nextPageUrl, setNextPageUrl] = useState('');
+  const [previousPageUrl, setPreviousPageUrl] = useState('');
+  const [cuisineType, setCuisineType] = useState('All');
+  const [mealType, setMealType] = useState('All');
+  const { recipes, loading, error } = useFetch(
+    params.queryTerm,
+    nextPageUrl,
+    cuisineType,
+    mealType
+  );
 
   const itemsPerPage = recipes.to - recipes.from + 1;
   const currentPage = Math.ceil(recipes.from / itemsPerPage);
 
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setInputValue('');
+    setNextPageUrl('');
+    navigate(`/search/${inputValue}`);
+  };
+
+  const handleSearch = () => {
+    navigate(`/search/${inputValue}`);
+  };
+
   const loadNextPage = () => {
     setPreviousPageUrl(nextPageUrl);
-    console.log(nextPageUrl);
     setNextPageUrl(recipes._links.next.href);
   };
 
   const loadPreviousPage = () => {
     setNextPageUrl(previousPageUrl);
-    setPreviousPageUrl("");
+    setPreviousPageUrl('');
   };
 
   const handlePaginationClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
+  };
+
+  const handleCuisineTypeChange = (event) => {
+    setCuisineType(event.target.value);
+  };
+
+  const handleMealTypeChange = (event) => {
+    setMealType(event.target.value);
   };
 
   if (loading) {
@@ -72,56 +104,65 @@ export const MainSearch = () => {
   return (
     <>
       <section className="my-12 max-w-screen-xl mx-auto px-6">
-       <div className="mx-auto">
-        <form class="flex flex-col md:flex-row gap-3">
-          
-          <select
-            id="cuisineType"
-            name="cuisineType"
-            class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
+        <div className="mx-auto">
+          <form
+            onSubmit={handleFormSubmit}
+            class="flex flex-col md:flex-row gap-3"
           >
-            <option value="All" selected="">
-              All
-            </option>
-            <option value="American">American</option>
-            <option value="Asian">Asian</option>
-            <option value="British">British</option>
-            <option value="Chinese">Chinese</option>
-            <option value="French">French</option>
-            <option value="Japanese">Japanese</option>
-            <option value="Korean">Korean</option>
-            <option value="Italian">Italian</option>
-          </select>
-
-          <select
-            id="mealType"
-            name="mealType"
-            class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
-          >
-            <option value="All" selected="">
-              All
-            </option>
-            <option value="Breakfast">Breakfast</option>
-            <option value="Dinner">Dinner</option>
-            <option value="Lunch">Lunch</option>
-            <option value="Snack">Snack</option>
-            <option value="Teatime">Teatime</option>
-          </select>
-
-          <div class="flex">
-            <input
-              type="text"
-              placeholder="Search for food ..."
-              class="w-full md:w-80 px-3 h-10 rounded-l border-2 border-gray-300 focus:outline-none focus:border-red-700"
-            />
-            <button
-              type="submit"
-              class="bg-red-700 text-white rounded-r px-2 md:px-3 py-0 md:py-1"
+            <select
+              id="cuisineType"
+              name="cuisineType"
+              value={cuisineType}
+              onChange={handleCuisineTypeChange}
+              class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
             >
-              Search
-            </button>
-          </div>
-        </form>
+              <option value="All" selected="">
+                All
+              </option>
+              <option value="American">American</option>
+              <option value="Asian">Asian</option>
+              <option value="British">British</option>
+              <option value="Chinese">Chinese</option>
+              <option value="French">French</option>
+              <option value="Japanese">Japanese</option>
+              <option value="Korean">Korean</option>
+              <option value="Italian">Italian</option>
+            </select>
+
+            <select
+              id="mealType"
+              name="mealType"
+              value={mealType}
+              onChange={handleMealTypeChange}
+              class="w-full h-10 border-2 border-gray-300 focus:outline-none focus:border-red-700 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider"
+            >
+              <option value="All" selected="">
+                All
+              </option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Dinner">Dinner</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Snack">Snack</option>
+              <option value="Teatime">Teatime</option>
+            </select>
+
+            <div class="flex">
+              <input
+                type="text"
+                placeholder="Search for food ..."
+                class="w-full md:w-80 px-3 h-10 rounded-l border-2 border-gray-300 focus:outline-none focus:border-red-700"
+                value={inputValue}
+                onChange={handleInputChange}
+              />
+              <button
+                type="submit"
+                onClick={handleSearch}
+                class="bg-red-700 text-white rounded-r px-2 md:px-3 py-0 md:py-1"
+              >
+                Search
+              </button>
+            </div>
+          </form>
         </div>
         <div className="relative flex py-5 items-center">
           <div className="flex-grow border-t border-gray-400"></div>
@@ -130,15 +171,15 @@ export const MainSearch = () => {
           </span>
           <div className="flex-grow border-t border-gray-400"></div>
         </div>
-        <h5 className="poppins text-gray-500 pb-4 text-center">
-          Explore the Top Recipes from around the globe.
+        <h5 className="capitalize poppins text-gray-500 pb-4 text-center">
+          {params.queryTerm}
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {recipes.hits.length > 0 ? (
             recipes.hits.slice(0, 18).map((recipe) => (
               <Link
                 to={`../recipe/details/recipe_${
-                  recipe.recipe.uri.split("_")[1]
+                  recipe.recipe.uri.split('_')[1]
                 }`}
               >
                 <div
@@ -177,17 +218,17 @@ export const MainSearch = () => {
         {/* Start of Pagination */}
         <div class="text-center mx-auto max-w-lg px-4 mt-12 bg-white sm:px-6">
           <span class="text-lg text-gray-700 dark:text-gray-400">
-            Showing{" "}
+            Showing{' '}
             <span class="font-semibold text-gray-900 dark:text-white">
-              {recipes.from}{" "}
+              {recipes.from}{' '}
             </span>
-            to{" "}
+            to{' '}
             <span class="font-semibold text-gray-900 dark:text-white">
-              {recipes.to}{" "}
+              {recipes.to}{' '}
             </span>
-            of{" "}
+            of{' '}
             <span class="font-semibold text-gray-900 dark:text-white">
-              {recipes.count}{" "}
+              {recipes.count}{' '}
             </span>
             Recipes
           </span>
@@ -221,7 +262,7 @@ export const MainSearch = () => {
                       d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
                       clip-rule="evenodd"
                     ></path>
-                  </svg>{" "}
+                  </svg>{' '}
                   Previous Page
                 </button>
               ) : (
@@ -250,7 +291,7 @@ export const MainSearch = () => {
                       d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
                       clip-rule="evenodd"
                     ></path>
-                  </svg>{" "}
+                  </svg>{' '}
                   Previous Page
                 </button>
               )}
@@ -262,7 +303,7 @@ export const MainSearch = () => {
                   className="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl   font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-r-md opacity-50 cursor-not-allowed"
                   data-id="pagination-next"
                 >
-                  Next Page{" "}
+                  Next Page{' '}
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -291,7 +332,7 @@ export const MainSearch = () => {
                   className="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl   font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 sm:rounded-r-md"
                   data-id="pagination-next"
                 >
-                  Next Page{" "}
+                  Next Page{' '}
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
