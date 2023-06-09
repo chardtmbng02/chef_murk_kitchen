@@ -72,7 +72,7 @@ export const MainSearch = () => {
   return (
     <>
       <section className="my-12 max-w-screen-xl mx-auto px-6">
-       {/* <div className="mx-auto">
+       <div className="mx-auto">
         <form class="flex flex-col md:flex-row gap-3">
           
           <select
@@ -122,7 +122,7 @@ export const MainSearch = () => {
             </button>
           </div>
         </form>
-        </div> */}
+        </div>
         <div className="relative flex py-5 items-center">
           <div className="flex-grow border-t border-gray-400"></div>
           <span className="flex-shrink text-3xl poppins mx-4 text-gray-500">
